@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand />
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="a4809b07-8151-4149-825d-57a8b5004db6" name="Default" comment="测试（别下）">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/zs_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/zs_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/zs_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/zs_war_exploded.xml" afterDir="false" />
+    <list default="true" id="a4809b07-8151-4149-825d-57a8b5004db6" name="Default" comment="导航栏">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login/denglu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login/translate_24dp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/login/translateelement.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_oss_aliyun_sdk_oss_2_8_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_oss_aliyun_sdk_oss_2_8_2.xml" afterDir="false" />
@@ -83,38 +94,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_13_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/login.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/spring/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring/respones/StatusCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/respones/StatusCode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/bootstrap/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/jigsaw.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/jigsaw.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jigsaw.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jigsaw.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="01@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-    </expand>
-    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -152,10 +138,11 @@
     <option name="height" value="1045" />
   </component>
   <component name="ProjectId" id="1PulgIRDpU3yMyM1DPD0adATaw7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -188,16 +175,16 @@
     <property name="settings.editor.selected.configurable" value="settings.github" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\idea\workspace\zs\src\main\webapp\jsps" />
+      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static" />
+      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\js" />
+      <recent name="F:\idea\workspace\test_hjl\src\main\webapp\jsps" />
+      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\css" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
       <recent name="cn" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\idea\workspace\zs\src\main\resources\static\bootstrap\css" />
-      <recent name="F:\idea\workspace\zs\src\main\webapp\jsps\left" />
-      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\img" />
-      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\bootstrap" />
-      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\bootstrap\js" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="spring.pojo" />
@@ -205,12 +192,12 @@
       <recent name="cn.hjl.springboot.pojo" />
       <recent name="cn.hjl.springboot.utils" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\idea\workspace\zs\src\main\webapp\jsps" />
-      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static" />
-      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\js" />
-      <recent name="F:\idea\workspace\test_hjl\src\main\webapp\jsps" />
-      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\css" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\idea\workspace\zs\src\main\resources\static\bootstrap\css" />
+      <recent name="F:\idea\workspace\zs\src\main\webapp\jsps\left" />
+      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\img" />
+      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\bootstrap" />
+      <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\bootstrap\js" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.Application">
@@ -244,6 +231,19 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -294,18 +294,6 @@
         <item itemvalue="Application.WordCount" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\jiale hao\AppData\Roaming\Subversion</configuration>
@@ -471,13 +459,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
