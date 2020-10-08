@@ -23,7 +23,7 @@ public class UserController {
     @RequestMapping("login")
     public String login(ZsUser user, HttpSession session) {
         //ZsUser user1 = userService.login(user);
-        System.out.println(user);
+        //System.out.println(user);
         if (user != null) {
             session.setAttribute("USER", user);
             return "index";
