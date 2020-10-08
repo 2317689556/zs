@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc861716-18d7-43f6-99b2-c2ae75d99c9a" name="Default" comment="jt测试4">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/cat_project_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/cat_project_war_exploded.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/test_hjl_war.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/test_hjl_war_exploded.xml" beforeDir="false" />
+    <list default="true" id="a4809b07-8151-4149-825d-57a8b5004db6" name="Default" comment="测试（别下）">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/zs_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/zs_war.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/zs_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/zs_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_1_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_1_11.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_oss_aliyun_sdk_oss_2_8_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_oss_aliyun_sdk_oss_2_8_2.xml" afterDir="false" />
@@ -88,35 +83,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_13_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_13_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_17.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/filter/LoginFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/filter/LoginFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsAddress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsAttract.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsAttract.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsDot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsDot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsEducation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsEducation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsEnroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsEnroll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsHschool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsHschool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsRegion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsRegion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsRest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsRest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsSchool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsSchool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsStudent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsStudent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsSupports.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsSupports.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsSyudy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsSyudy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/pojo/ZsUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/respones/StatusCode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/respones/StatusCode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/utils/AliyunOSSUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/utils/AliyunOSSUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/spring/utils/SendSMSUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/utils/SendSMSUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap/DemandThreeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/DemandThreeTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap/LoggerGenerate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/LoggerGenerate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/jigsaw.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/jigsaw.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/jigsaw.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jigsaw.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsps/left/left.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/left/left.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/spring/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/spring/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/bootstrap/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/spring/respones/StatusCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/spring/respones/StatusCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/bootstrap/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/jigsaw.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/jigsaw.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jigsaw.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/jigsaw.js" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -141,31 +116,6 @@
     </expand>
     <select />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/spring/controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -187,19 +137,6 @@
     <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/spring/controller/UserController.java" />
-      </list>
-    </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -207,20 +144,6 @@
         <option name="userSettingsFile" value="E:\maven\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="cat_project" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="NodePackageJsonFileManager">
-    <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-13" />
@@ -230,122 +153,6 @@
   </component>
   <component name="ProjectId" id="1PulgIRDpU3yMyM1DPD0adATaw7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="filter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="spring" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="zhaosheng2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="zhaosheng2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="jsps" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -406,18 +213,6 @@
       <recent name="F:\idea\workspace\test_hjl\src\main\resources\static\css" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Spring Boot.Application">
     <configuration name="NovelCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="spring.utils.NovelCount" />
@@ -429,6 +224,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="WordCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="spring.utils.WordCount" />
@@ -440,29 +238,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -478,29 +268,17 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
+    <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
       <properties />
       <listeners />
-      <method>
+      <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
@@ -685,48 +463,6 @@
     <option name="localTasksCounter" value="11" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2254000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info anchor="right" id="Palette" order="6" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="7" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.32936078" />
-      <window_info anchor="right" id="Maven Projects" order="0" weight="0.32995737" />
-      <window_info anchor="bottom" id="Database Changes" order="3" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info id="Designer" order="0" />
-      <window_info anchor="right" id="Database" order="2" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="1" />
-      <window_info anchor="bottom" id="Java Enterprise" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Version Control" order="4" sideWeight="0.49840087" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="8" />
-      <window_info anchor="bottom" id="Spring" order="0" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.25266525" />
-      <window_info anchor="right" id="Bean Validation" order="5" />
-      <window_info id="Web" order="4" side_tool="true" />
-      <window_info anchor="right" id="Theme Preview" order="4" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Thumbnails" order="13" sideWeight="0.49946696" weight="0.32936078" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.49946696" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Message" order="5" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -736,28 +472,12 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
+              <option name="COLUMN_ORDER" />
             </State>
           </value>
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="1" />
@@ -791,38 +511,38 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="835" y="436" width="274" height="281" key="Github.ShareDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1602147120631" />
-    <state width="1877" height="247" key="GridCell.Tab.0.bottom" timestamp="1602141046109">
+    <state width="1877" height="311" key="GridCell.Tab.0.bottom" timestamp="1602153765150">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1602141046109" />
-    <state width="1877" height="247" key="GridCell.Tab.0.center" timestamp="1602141046109">
+    <state width="1877" height="311" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1602153765150" />
+    <state width="1877" height="311" key="GridCell.Tab.0.center" timestamp="1602153765150">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1602141046109" />
-    <state width="1877" height="247" key="GridCell.Tab.0.left" timestamp="1602141046109">
+    <state width="1877" height="311" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1602153765150" />
+    <state width="1877" height="311" key="GridCell.Tab.0.left" timestamp="1602153765150">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1602141046109" />
-    <state width="1877" height="247" key="GridCell.Tab.0.right" timestamp="1602141046109">
+    <state width="1877" height="311" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1602153765150" />
+    <state width="1877" height="311" key="GridCell.Tab.0.right" timestamp="1602153765150">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1602141046109" />
-    <state width="1877" height="247" key="GridCell.Tab.1.bottom" timestamp="1602141046110">
+    <state width="1877" height="311" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1602153765150" />
+    <state width="1877" height="311" key="GridCell.Tab.1.bottom" timestamp="1602153765151">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1602141046110" />
-    <state width="1877" height="247" key="GridCell.Tab.1.center" timestamp="1602141046109">
+    <state width="1877" height="311" key="GridCell.Tab.1.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1602153765151" />
+    <state width="1877" height="311" key="GridCell.Tab.1.center" timestamp="1602153765150">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1602141046109" />
-    <state width="1877" height="247" key="GridCell.Tab.1.left" timestamp="1602141046109">
+    <state width="1877" height="311" key="GridCell.Tab.1.center/0.0.1920.1080@0.0.1920.1080" timestamp="1602153765150" />
+    <state width="1877" height="311" key="GridCell.Tab.1.left" timestamp="1602153765150">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1602141046109" />
-    <state width="1877" height="247" key="GridCell.Tab.1.right" timestamp="1602141046109">
+    <state width="1877" height="311" key="GridCell.Tab.1.left/0.0.1920.1080@0.0.1920.1080" timestamp="1602153765150" />
+    <state width="1877" height="311" key="GridCell.Tab.1.right" timestamp="1602153765150">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state width="1877" height="247" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1602141046109" />
+    <state width="1877" height="311" key="GridCell.Tab.1.right/0.0.1920.1080@0.0.1920.1080" timestamp="1602153765150" />
     <state width="1877" height="405" key="GridCell.Tab.2.bottom" timestamp="1601515602079">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -855,10 +575,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="652" y="368" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1602146177066" />
-    <state x="754" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602147136138">
+    <state x="754" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602153700305">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="754" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1602147136138" />
+    <state x="754" y="458" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080@0.0.1920.1080" timestamp="1602153700305" />
     <state x="647" y="295" width="626" height="490" key="find.popup" timestamp="1601607321968">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -888,48 +608,5 @@
     <SUITE FILE_PATH="coverage/05_$Application.ic" NAME="Application Coverage Results" MODIFIED="1572422131476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>spring.*</FILTER>
     </SUITE>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/spring/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
