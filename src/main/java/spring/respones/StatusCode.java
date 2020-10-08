@@ -3,16 +3,14 @@ package spring.respones;
 /**
  * 状态码枚举
  **/
-public enum  StatusCode {
+public enum StatusCode {
 
-    Success(200,"成功"),
-    Fail(-1,"失败"),
+    Success(200, "成功"),
+    Fail(-1, "失败"),
 
-    InvalidParams(10010,"非法的参数！"),
+    InvalidParams(10010, "非法的参数！"),
 
-    UserEmailHasExist(10011,"当前用户邮箱已存在!"),
-
-    ;
+    UserEmailHasExist(10011, "当前用户邮箱已存在!"),;
 
     private Integer code;
     private String msg;
