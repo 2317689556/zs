@@ -23,7 +23,8 @@
         </button>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-8 col-lg-offset-2"style="color: white">
+
                 </div>
             </div>
         </div>
