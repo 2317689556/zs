@@ -1,18 +1,17 @@
 package spring.pojo;
 
-import lombok.Data;
 
-import java.sql.Date;
+import java.util.Date;
+
 
 /**
- *地区表  region
+ *地区表 zs_region
  **/
-@Data
 public class ZsRegion {
 
-  private Integer id;
-  private String bigint;//省
-  private String datetime;//市
-  private Date varchar;//县
-  private Date pid;//级别id
+  private long id;
+  private Date createtime;//创建时间
+  private String areaName;//地区名称
+  private long pid;//地区等级id
+
 }

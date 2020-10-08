@@ -24,5 +24,4 @@ public class ZsSyudy {
   private String syEmpty3;
   private String syEmpty4;
   private String syEmpty5;
-
 }
