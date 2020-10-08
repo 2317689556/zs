@@ -1,8 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/bootstrap/css/style.css">
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/bootstrap/css/style.css">
 
 <div id="wrapper">
     <div class="overlay"></div>
@@ -28,7 +28,8 @@
                 <a href="#"><i class="fa fa-fw fa-cog"></i> Third page</a>
             </li>
             <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown <span class="caret"></span></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-plus"></i> Dropdown
+                    <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">Dropdown heading</li>
                     <li><a href="#">Action</a></li>

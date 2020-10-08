@@ -21,7 +21,9 @@ import java.util.UUID;
  * @author lujiasheng
  * @create 2019-10-19 下午 1:11
  * @desc 阿里云oss工具类
- **//*
+ * <p>
+ * 连接超时时间为100秒
+ *//*
 
 public class AliyunOSSUtil {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(spring.utils.AliyunOSSUtil.class);
@@ -45,8 +47,8 @@ public class AliyunOSSUtil {
         ClientConfiguration clientConfiguration=new ClientConfiguration();
         */
 /**
-         * 连接超时时间为100秒
-         *//*
+ * 连接超时时间为100秒
+ *//*
 
         clientConfiguration.setConnectionTimeout(100000);
         try {

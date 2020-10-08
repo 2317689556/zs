@@ -3,14 +3,12 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="spring.dao.UserMapper">
-    <!--<select id="NovelShow" resultType="Fangwu">
-        SELECT * FROM address GROUP BY money
-    </select>-->
+
 
     <!--登录-->
-    <!--User login(User user);-->
-    <!--<select id="login" resultType="GroupUser" parameterType="GroupUser">
-        select * from aoyo_group_user where group_user_name=#{groupUserName} AND password=#{password}
-    </select>-->
+    <!--ZsUser login(ZsUser user);-->
+    <select id="login" resultType="ZsUser" parameterType="ZsUser">
+        select * from zs_user where u_name=#{uName} AND u_pass=#{uPass}
+    </select>
 
 </mapper>

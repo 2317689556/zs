@@ -1,11 +1,12 @@
 package spring.dao;
 
 
+import spring.pojo.ZsUser;
 
 public interface UserMapper {
 
-
     /*登录*/
-    /*GroupUser login(GroupUser user);*/
+    ZsUser login(ZsUser user);
+
 
 }
