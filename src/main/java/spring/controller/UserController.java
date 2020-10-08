@@ -28,7 +28,7 @@ public class UserController {
             return "index";
         }else{
             return "login";
-            666郝佳乐
+            666郝佳乐ffffffff
         }
     }*/
 
