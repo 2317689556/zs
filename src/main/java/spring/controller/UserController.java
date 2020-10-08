@@ -3,6 +3,7 @@ package spring.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import spring.pojo.ZsUser;
 import spring.service.UserService;
 import spring.utils.SendSMSUtils;
 
@@ -19,22 +20,17 @@ public class UserController {
     UserService userService;
 
     /*登录*/
-  /*  @RequestMapping("login")
-    public String  login(GroupUser user, HttpSession session){
-        GroupUser user1 = userService.login(user);
-        System.out.println(user1);
-        if(user1!=null){
-            session.setAttribute("USER",user1);
+    @RequestMapping("login")
+    public String  login(ZsUser user, HttpSession session){
+        //ZsUser user1 = userService.login(user);
+        System.out.println(user);
+        if(user!=null){
+            session.setAttribute("USER",user);
             return "index";
         }else{
             return "login";
-            666郝佳乐
-            1105
-            jt111
-            焦焘
-            我是焦焘11
         }
-    }*/
+    }
 
 
 
