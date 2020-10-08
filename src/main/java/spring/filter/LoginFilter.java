@@ -18,11 +18,11 @@ public class LoginFilter extends HttpFilter {
 
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
-        ZsUser user = (ZsUser)req.getSession().getAttribute(AuthUtil.USERLOGIN);
-        if (user==null){
+        ZsUser user = (ZsUser) req.getSession().getAttribute(AuthUtil.USERLOGIN);
+        if (user == null) {
             res.sendRedirect("/login.jsp");
-        }else{
-            chain.doFilter(req,res);
+        } else {
+            chain.doFilter(req, res);
         }
     }
 

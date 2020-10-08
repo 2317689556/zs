@@ -20,7 +20,7 @@ import java.io.IOException;
 public class DemandThreeTest {
 
     //map阶段
-    public static class MyMap extends Mapper<LongWritable,Text,Text,Text>{
+    public static class MyMap extends Mapper<LongWritable, Text, Text, Text> {
         @Override
         protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
             //重写map方法
@@ -35,40 +35,40 @@ public class DemandThreeTest {
             //总分数
             Double sum = 0.0;
             //考试次数
-            int kscount = split.length-2;
+            int kscount = split.length - 2;
 
             //求变量
             courseName = split[0];
             studentName = split[1];
             //avg = sum/kscount;
-            for(int i=2;i<split.length;i++){
-                sum+=Integer.parseInt(split[i]);
+            for (int i = 2; i < split.length; i++) {
+                sum += Integer.parseInt(split[i]);
             }
-            avg = sum/kscount;
-            context.write(new Text(courseName),new Text(studentName+"\t"+avg));
+            avg = sum / kscount;
+            context.write(new Text(courseName), new Text(studentName + "\t" + avg));
         }
     }
 
     //reduce阶段
-    public static class MyReduce extends Reducer<Text,Text,Text,Text>{
+    public static class MyReduce extends Reducer<Text, Text, Text, Text> {
         @Override
         protected void reduce(Text key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
-            String studentName=null;
-            Double avg=0.0;
-            for(Text a:values){
+            String studentName = null;
+            Double avg = 0.0;
+            for (Text a : values) {
                 String[] split = a.toString().split("\t");
-                if(Double.parseDouble(split[1])>avg){
-                    avg=Double.parseDouble(split[1]);
-                    studentName=split[0];
+                if (Double.parseDouble(split[1]) > avg) {
+                    avg = Double.parseDouble(split[1]);
+                    studentName = split[0];
                 }
             }
-            context.write(key,new Text(studentName+"\t"+avg));
-            for(Text a:values){
+            context.write(key, new Text(studentName + "\t" + avg));
+            for (Text a : values) {
                 String[] split1 = a.toString().split("\t");
-                if(Double.parseDouble(split1[1])==avg||!split1[0].equals(studentName)){
-                    avg=Double.parseDouble(split1[1]);
-                    studentName=split1[0];
-                    context.write(key,new Text(studentName+"\t"+avg));
+                if (Double.parseDouble(split1[1]) == avg || !split1[0].equals(studentName)) {
+                    avg = Double.parseDouble(split1[1]);
+                    studentName = split1[0];
+                    context.write(key, new Text(studentName + "\t" + avg));
                 }
             }
 
@@ -80,13 +80,13 @@ public class DemandThreeTest {
         Configuration configuration = new Configuration();
 
         //创建JOB对象
-        Job job = Job.getInstance(configuration,"renfaxian");
+        Job job = Job.getInstance(configuration, "renfaxian");
 
         //设置job处理类
         job.setJarByClass(DemandThreeTest.class);
 
         //设置作业处理的输入路径
-        FileInputFormat.setInputPaths(job,new Path("C:\\Users\\Renfaxian\\Desktop\\lianxi.txt"));
+        FileInputFormat.setInputPaths(job, new Path("C:\\Users\\Renfaxian\\Desktop\\lianxi.txt"));
 
         //设置map相关
         job.setMapperClass(MyMap.class);
@@ -99,8 +99,8 @@ public class DemandThreeTest {
         job.setOutputValueClass(Text.class);
 
         //设置作业处理的输出路径
-        FileOutputFormat.setOutputPath(job,new Path("C:\\Users\\Renfaxian\\Desktop\\result2"));
+        FileOutputFormat.setOutputPath(job, new Path("C:\\Users\\Renfaxian\\Desktop\\result2"));
         boolean b = job.waitForCompletion(true);
-        System.exit(b ? 0:1);
+        System.exit(b ? 0 : 1);
     }
 }
