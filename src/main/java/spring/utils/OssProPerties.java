@@ -1,3 +1,4 @@
+/*
 package spring.utils;
 
 
@@ -38,4 +39,4 @@ public class OssProPerties implements InitializingBean {
         ALIYUN_DIR = oss_dir;
         ALIYUN_BUCKET_NAME = oss_bucketname;
     }
-}
+}*/

@@ -131,12 +131,14 @@
             <artifactId>lombok</artifactId>
             <version>1.16.10</version>
         </dependency>
-        <dependency>
+
+
+        <!--<dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
-        </dependency>
+        </dependency>-->
 
     </dependencies>
 

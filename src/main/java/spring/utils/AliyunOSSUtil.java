@@ -1,3 +1,4 @@
+/*
 package spring.utils;
 
 import com.aliyun.oss.ClientConfiguration;
@@ -15,11 +16,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
+*/
 /**
  * @author lujiasheng
  * @create 2019-10-19 下午 1:11
  * @desc 阿里云oss工具类
- **/
+ **//*
+
 public class AliyunOSSUtil {
     private static final org.slf4j.Logger logger = LoggerFactory.getLogger(spring.utils.AliyunOSSUtil.class);
 
@@ -40,9 +43,11 @@ public class AliyunOSSUtil {
         //创建一个服务器
         OSSClient ossClient = new OSSClient(endpoint,accessKeyId,accessKeySecret);
         ClientConfiguration clientConfiguration=new ClientConfiguration();
-        /**
+        */
+/**
          * 连接超时时间为100秒
-         */
+         *//*
+
         clientConfiguration.setConnectionTimeout(100000);
         try {
             //容器不存在，就创建
@@ -56,8 +61,10 @@ public class AliyunOSSUtil {
             String fileUrl = fileHost+"/"+(dateStr + "/" + UUID.randomUUID().toString().replace("-","")+"-"+file.getName());
             //上传文件
             PutObjectResult result = ossClient.putObject(new PutObjectRequest(bucketName, fileUrl, file));
-        /*    //设置权限 这里是公开读
-            ossClient.setBucketAcl(bucketName,CannedAccessControlList.PublicRead);*/
+        */
+/*    //设置权限 这里是公开读
+            ossClient.setBucketAcl(bucketName,CannedAccessControlList.PublicRead);*//*
+
             if(null != result){
                 logger.info("==========>OSS文件上传成功,OSS地址："+fileUrl);
                 file.delete();
@@ -75,3 +82,4 @@ public class AliyunOSSUtil {
     }
 }
 
+*/
