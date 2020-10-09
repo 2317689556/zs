@@ -29,4 +29,7 @@ public class ZsSchool {
     private String slEmpty4;
     private String slEmpty5;
 
+    private String asName;
+    private String areaName;
+
 }

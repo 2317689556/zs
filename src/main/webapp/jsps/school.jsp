@@ -75,33 +75,28 @@
                     field: 'slOuterName',
                     title: '校外学习中心全称'
                 }, {
-                    field: 'sSalesman',
+                    field: 'areaName',
                     title: '省份'
                 }, {
-                    field: 'writeDate',
-                    title: '城市'
-                }, {
-                    field: 'signDate',
+                    field: 'asName',
                     title: '区域管理中心'
                 }, {
                     field: 'slState',
-                    title: '状态'
-                },  /*{
-                    field: 'signDate',
-                    title: '负责人'
-                },  {
-                    field: 'signDate',
-                    title: '负责人电话'
-                },  {
-                    field: 'signDate',
-                    title: '联系地址'
-                },*/{
+                    title: '状态',
+                    formatter: function (value, row, index) {
+                        if (value==1){
+                            return "启用";
+                        }else {
+                            return "禁用";
+                        }
+                    }
+                }, {
                     title: '操作',
                     formatter: function (value, row, index) {
-                        return "<a href=''>操作</a>+" +
-                            "<a href=''>删除</a>+" +
-                            "<a href=''>用户管理</a>+" +
-                            "<a href=''>报名点管理</a>"
+                        return "<button><a href=''>操作</a></button>"+
+                            "<button><a href=''>删除</a></button>"+
+                            "<button><a href=''>用户管理</a></button>"+
+                            "<button><a href=''>报名点管理</a></button>"
                     }
                 }
             ]
