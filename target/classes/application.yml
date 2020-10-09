@@ -15,7 +15,7 @@ spring:
 #数据源
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/aoyo?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://47.104.105.86:3306/01?useUnicode=true&characterEncoding=utf8
     username: root
     password: 123
   jackson:

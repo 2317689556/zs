@@ -1,6 +1,5 @@
 package spring.dao;
 
-
 import spring.pojo.ZsUser;
 
 public interface UserMapper {

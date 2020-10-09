@@ -9,9 +9,6 @@ import spring.utils.SendSMSUtils;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 @Controller
 @RequestMapping("/user")
@@ -23,9 +20,9 @@ public class UserController {
     @RequestMapping("login")
     public String login(ZsUser user, HttpSession session) {
         ZsUser user1 = userService.login(user);
-        System.out.println(user);
-        if (user != null) {
-            session.setAttribute("USER", user);
+        System.out.println(user1);
+        if (user1 != null) {
+            session.setAttribute("USER", user1);
             return "index";
         } else {
             return "login";
