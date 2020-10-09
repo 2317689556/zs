@@ -4,8 +4,19 @@
 <html>
 <head>
     <title>学习中心--新增学习中心</title>
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/bootstrap/table/bootstrap-table.js"></script>
+    <script src="/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/cxCalendar/js/jquery.cxcalendar.js"></script>
+    <script src="/cxCalendar/js/jquery.cxcalendar.languages.js"></script>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-tab.css">
+    <link rel="stylesheet" href="/cxCalendar/css/jquery.cxcalendar.css">
 </head>
 <body>
+
 
 <c:import url="../utlis/background.jsp"/>
 <c:import url="../utlis/broadside.jsp"/>
@@ -119,7 +130,7 @@
                 </div>
             </div>
 
-            <div style="margin-left: 139px; margin-top:5px; width: 700px;height: 35px">
+            <div style="margin-left: 125px; margin-top:5px; width: 700px;height: 35px">
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px"><i style="color: red">*</i>&nbsp;负责人姓名</div>
                     <div class="col-sm-10">
@@ -128,7 +139,7 @@
                 </div>
             </div>
 
-            <div style="margin-left: 139px; margin-top:5px; width: 700px;height: 35px">
+            <div style="margin-left: 125px; margin-top:5px; width: 700px;height: 35px">
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px"><i style="color: red">*</i>&nbsp;负责人电话</div>
                     <div class="col-sm-10">
@@ -137,7 +148,7 @@
                 </div>
             </div>
 
-            <div style="margin-left: 139px; margin-top:5px; width: 700px;height: 35px">
+            <div style="margin-left: 125px; margin-top:5px; width: 700px;height: 35px">
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px"><i style="color: red">*</i>&nbsp;负责人邮箱</div>
                     <div class="col-sm-10">
@@ -146,14 +157,32 @@
                 </div>
             </div>
 
-            <div style="margin-left: 139px; margin-top:5px; width: 700px;height: 35px">
+            <div style="margin-left: 134px; margin-top:5px; width: 700px;height: 35px">
             <div class="form-group">
                 <div style="float: left;margin-top: 3px">联系人姓名</div>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="9" style="width: 200px;height: 27px">
                 </div>
             </div>
-        </div>
+             </div>
+
+            <div style="margin-left: 134px; margin-top:5px; width: 700px;height: 35px">
+                <div class="form-group">
+                    <div style="float: left;margin-top: 3px">联系人电话</div>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="10" style="width: 200px;height: 27px">
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-left: 134px; margin-top:5px; width: 700px;height: 35px">
+                <div class="form-group">
+                    <div style="float: left;margin-top: 3px">联系人邮件</div>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="11" style="width: 200px;height: 27px">
+                    </div>
+                </div>
+            </div>
 
 
         </form>
