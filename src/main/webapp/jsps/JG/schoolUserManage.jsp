@@ -6,9 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <html>
 <head>
     <title>学习中心用户管理</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-tab.css">
+    <link rel="stylesheet" href="/cxCalendar/css/jquery.cxcalendar.css">
     <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
     <script src="/bootstrap/table/bootstrap-table.js"></script>
     <script src="/bootstrap/js/bootstrap-tab.js"></script>
@@ -16,9 +21,7 @@
     <script src="/bootstrap/js/bootstrap.min.js"></script>
     <script src="/cxCalendar/js/jquery.cxcalendar.js"></script>
     <script src="/cxCalendar/js/jquery.cxcalendar.languages.js"></script>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap-tab.css">
-    <link rel="stylesheet" href="/cxCalendar/css/jquery.cxcalendar.css">
+
 </head>
 <body>
 <c:import url="../utlis/background.jsp"/>
@@ -26,11 +29,96 @@
 <div style="width: 1300px; height: 800px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black;">
     <h3 style="margin-bottom: 40px">学习中心用户管理</h3>
     <div style="margin: 40px; margin-top: 20px; box-shadow: 0 0 4px black; height: 620px; padding: 10px;">
+        <div style="text-align: right"><button class="btn btn-primary"  style="background-color: #4CAF50;
+           border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;" id="addSchoolUser">+新增用户</button></div>
         <table id="schooluser_tab">
         </table>
     </div>
 </div>
 
+
+<!-- 学习中心用户添加 -->
+<div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">学习中心用户添加</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form" action="##" id="adduser2">
+                    <div class="form-group">
+                        <div class="col-sm-7" id="div01">
+                            <input type="hidden" id="addareaId" name='userId'/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">姓名：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="syName" name="syName"/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">用户名：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="syUsername" name="syUsername"/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">密码：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="syPassword" name="syPassword"/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">邮箱：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="syEmail" name="syEmail"/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">电话：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="syPhone" name="syPhone"/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-10" style="text-align: right; margin-top: 30px;">
+                            <button id="sendMail" onclick="addSchoolUser()" type="button" class="btn btn-primary">提交</button>
+                            <button type="reset" class="btn btn-primary" style="margin: 0 100px 0 1em">重置</button>
+                        </div>
+                    </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 <script>
     usertab()
@@ -48,11 +136,6 @@
             //发送到服务器的数据编码类型，设置form表单传输编码
             contentType: "aplication/x-www-form-urlencoded;charset=UTF-8",
             striped: true,//斑马线
-            queryParams: function () {
-                return {
-                    id: $("#tab_id").val(),
-                }
-            },
             columns: [
                 {
                     field: 'id',
@@ -61,13 +144,13 @@
                         return index + 1;
                     }
                 }, {
-                    field: 'slNumber',
+                    field: 'syName',
                     title: '姓名'
                 }, {
-                    field: 'slSchoolName',
+                    field: 'syUsername',
                     title: '用户名'
                 },{
-                    field: 'slState',
+                    field: 'syState',
                     title: '状态',
                     formatter: function (value, row, index) {
                         if (value==1){
@@ -79,14 +162,40 @@
                 }, {
                     title: '操作',
                     formatter: function (value, row, index) {
-                        return "<button><a href=''>操作</a></button>"+
+                        return "<button><a href=''>编辑</a></button>"+
                             "<button><a href=''>删除</a></button>"+
-                            "<button><a href='/JG/schoolUserManage.jsp'>用户管理</a></button>"+
-                            "<button><a href=''>报名点管理</a></button>"
+                            "<button><a href=''>重置密码</a></button>"
                     }
                 }
             ]
         })
+    }
+    
+
+
+  /*添加学习中心用户*/
+    $('#addSchoolUser').on('click', function () {
+        $("#addUserModal").modal("show");
+    });
+    function addSchoolUser() {
+        var data = new FormData($("#addSchoolUser")[0]);
+        $.ajax({
+            type: "post",
+            dataType: "json",
+            url: "${pageContext.request.contextPath}/school/addSchoolUser",
+            data: data,
+            processData: false,
+            contentType: false,
+            success: function (data) {
+                $("#addUserModal").modal("hide");
+                alert("添加成功");
+                window.location.reload();
+            },
+            error: function () {
+                alert("请求失败！！！！");
+            }
+        })
+
     }
 
 
