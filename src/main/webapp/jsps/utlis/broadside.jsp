@@ -12,7 +12,7 @@
                         <%--权限1，2可查看--%>
                     <ul>
                             <li>
-                                <a  href="/jsps/school.jsp">学习中心管理</a>
+                                <a  href="/jsps/JG/school.jsp">学习中心管理</a>
                                 <ul>
                                     <li>
                                         <a class="menu3">学习中心用户管理</a>
@@ -59,7 +59,7 @@
                               <a>基础信息</a>
                               <ul>
                                   <li>
-                                      <a class="menu3">高校编码管理</a>
+                                      <a class="menu3" href="/jsps/ZS/UCManagement.jsp">高校编码管理</a>
                                   </li>
                               </ul>
                           </li>
