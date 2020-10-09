@@ -2,8 +2,8 @@ package spring.service;
 
 import org.springframework.stereotype.Service;
 import spring.dao.SchoolMapper;
-import spring.pojo.ZsDot;
 import spring.pojo.ZsSchool;
+import spring.pojo.ZsSyudy;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -17,7 +17,11 @@ public class SchoolService {
         return schoolMapper.showSchoolenter();
     }
 
-    /*JG-surgicalDrape.jsp----机构信息管理---报名点信息查询*/
-    public List<ZsDot> surgicalDrape() { return schoolMapper.surgicalDrape();
+    public List<ZsSyudy> showSchoolUser() {
+        return schoolMapper.showSchoolUser();
+    }
+
+    public int addSchoolUser(ZsSyudy zsSyudy) {
+        return schoolMapper.addSchoolUser(zsSyudy);
     }
 }

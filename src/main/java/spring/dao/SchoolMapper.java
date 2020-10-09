@@ -1,13 +1,17 @@
 package spring.dao;
 
-import spring.pojo.ZsDot;
 import spring.pojo.ZsSchool;
+import spring.pojo.ZsSyudy;
 
 import java.util.List;
 
 public interface SchoolMapper {
+    //学习中心管理
     List<ZsSchool> showSchoolenter();
 
-    /*JG-surgicalDrape.jsp----机构信息管理---报名点信息查询*/
-    List<ZsDot> surgicalDrape();
+    //学习中心用户管理
+    List<ZsSyudy> showSchoolUser();
+
+    //添加学习中心用户
+    int addSchoolUser(ZsSyudy zsSyudy);
 }

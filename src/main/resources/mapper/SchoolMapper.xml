@@ -4,16 +4,30 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="spring.dao.SchoolMapper">
 
+
+    <!-- List<ZsSchool> showSchoolenter();-->
+    <!--展示学习中心-->
     <select id="showSchoolenter" resultType="ZsSchool">
         SELECT sc.sl_number,sc.sl_school_name,sc.sl_outer_name,sc.sl_state,re.areaName,ad.as_name
         FROM zs_school sc,zs_region re,zs_address ad
         WHERE sc.sl_area_id=re.id AND ad.id=sc.sl_district_id
     </select>
 
-    <!--JG-surgicalDrape.jsp..机构信息管理..报名点信息查询-->
-    <!--List<ZsDot> surgicalDrape();-->
-    <select id="surgicalDrape" resultType="ZsDot">
-        select dot.*,school.sl_school_name as scname from zs_dot dot,zs_school school where dot.dt_school_id=school.sl_number
+
+    <!--List<ZsSyudy> showSchoolUser();-->
+    <!--学习中心用户-->
+    <select id="showSchoolUser" resultType="ZsSyudy">
+          select * from zs_syudy
     </select>
+
+    <!--
+    //添加学习中心用户
+    int addSchoolUser(ZsSyudy zsSyudy);-->
+    <insert id="addSchoolUser" parameterType="ZsSyudy">
+         insert into zs_syudy (id,sy_name,sy_username,sy_password,sy_state,sy_email,sy_phone)
+        values
+            (null,#{syName},#{syUsername},#{syPassword},0,#{syEmail},#{syPhone})
+
+    </insert>
 
 </mapper>

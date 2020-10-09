@@ -3,8 +3,8 @@ package spring.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import spring.pojo.ZsDot;
 import spring.pojo.ZsSchool;
+import spring.pojo.ZsSyudy;
 import spring.service.SchoolService;
 
 import javax.annotation.Resource;
@@ -16,6 +16,8 @@ public class SchoolController {
     @Resource
     private SchoolService schoolService;
 
+
+    //学习中心管理
     @RequestMapping("/showSchoolenter")
     @ResponseBody
     public List<ZsSchool> showSchoolenter(){
@@ -23,14 +25,23 @@ public class SchoolController {
         return list;
     }
 
-    /*JG-surgicalDrape.jsp----机构信息管理---报名点信息查询*/
-    @RequestMapping("surgicalDrape")
+
+    //学习中心用户管理
     @ResponseBody
-    public List<ZsDot> surgicalDrape(){
-        List<ZsDot> list=schoolService.surgicalDrape();
-        for (ZsDot dd:list){
-            System.out.println(dd);
-        }
+    @RequestMapping("/showSchoolUser")
+    public List<ZsSyudy> showSchoolUser(){
+        List<ZsSyudy> list = schoolService.showSchoolUser();
         return list;
+    }
+
+    //添加学习中心用户
+    @RequestMapping("/addSchoolUser")
+    @ResponseBody
+    public boolean addSchoolUser(ZsSyudy zsSyudy){
+        int i = schoolService.addSchoolUser(zsSyudy);
+        if (i>0){
+            return true;
+        }
+        return false;
     }
 }

@@ -53,11 +53,11 @@
             //发送到服务器的数据编码类型，设置form表单传输编码
             contentType: "aplication/x-www-form-urlencoded;charset=UTF-8",
             striped: true,//斑马线
-            queryParams: function () {
+           /* queryParams: function () {
                 return {
                     id: $("#tab_id").val(),
                 }
-            },
+            },*/
             columns: [
                 {
                     field: 'id',
@@ -93,9 +93,9 @@
                 }, {
                     title: '操作',
                     formatter: function (value, row, index) {
-                        return "<button><a href=''>操作</a></button>"+
+                        return "<button><a href=''>编辑</a></button>"+
                             "<button><a href=''>删除</a></button>"+
-                            "<button><a href='/JG/schoolUserManage.jsp'>用户管理</a></button>"+
+                            "<button><a href='/jsps/JG/schoolUserManage.jsp'>用户管理</a></button>"+
                             "<button><a href=''>报名点管理</a></button>"
                     }
                 }

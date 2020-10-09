@@ -15,7 +15,7 @@
                                 <a  href="/jsps/JG/school.jsp">学习中心管理</a>
                                 <ul>
                                     <li>
-                                        <a class="menu3">学习中心用户管理</a>
+                                        <a href="/jsps/JG/schoolUserManage.jsp">学习中心用户管理</a>
                                     </li>
                                 </ul>
                             </li>
