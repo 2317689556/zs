@@ -33,7 +33,7 @@
                         </li>
                         <li><a href="/jsps/stockOut.jsp">学习中心信息查询</a>
                         </li>
-                        <li><a href="/jsps/surgicalDrape.jsp">报名点信息查询</a>
+                        <li><a href="/jsps/JG/surgicalDrape.jsp">报名点信息查询</a>
                         </li>
 
                         <li>

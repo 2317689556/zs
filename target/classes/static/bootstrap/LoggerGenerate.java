@@ -11,11 +11,11 @@ public class LoggerGenerate {
     private static Logger logger = Logger.getLogger(LoggerGenerate.class.getName());
 
     public static void main(String[] args) throws InterruptedException {
-        int value =1;
+        int value = 1;
         while (true) {
             Thread.sleep(1000);
-            logger.info("value:"+value);
-            value+=1;
+            logger.info("value:" + value);
+            value += 1;
             //logger.info(value);
         }
     }
