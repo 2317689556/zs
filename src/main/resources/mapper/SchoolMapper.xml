@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spring.dao.SchoolMapper">
+
+    <select id="showSchoolenter" resultType="ZsSchool">
+        SELECT sc.sl_number,sc.sl_school_name,sc.sl_outer_name,sc.sl_state,re.areaName,ad.as_name
+        FROM zs_school sc,zs_region re,zs_address ad
+        WHERE sc.sl_area_id=re.id AND ad.id=sc.sl_district_id
+    </select>
+
+</mapper>

@@ -12,7 +12,7 @@
                         <%--权限1，2可查看--%>
                     <ul>
                             <li>
-                                <a>学习中心管理</a>
+                                <a  href="/jsps/school.jsp">学习中心管理</a>
                                 <ul>
                                     <li>
                                         <a class="menu3">学习中心用户管理</a>
