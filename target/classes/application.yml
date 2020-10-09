@@ -2,20 +2,21 @@
 spring:
   mvc:
     view:
-      suffix: .jsp
       prefix: /jsps/
+      suffix: .jsp
 
-#开启热部署
+
+  #开启热部署
   devtools:
     restart:
       enabled: true
   resources:
-    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
+    static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:static/,classpath:/public/,file:${web.upload-path}
 
 #数据源
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/aoyo?useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://47.104.105.86:3306/01?useUnicode=true&characterEncoding=utf8
     username: root
     password: 123
   jackson:
