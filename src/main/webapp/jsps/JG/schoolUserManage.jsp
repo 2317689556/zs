@@ -1,16 +1,14 @@
 <%--
   Created by IntelliJ IDEA.
   User: HQKJ
-  Date: 2020/10/8
-  Time: 18:52
+  Date: 2020/10/9
+  Time: 10:35
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <html>
 <head>
-    <title>学习中心</title>
+    <title>学习中心用户管理</title>
     <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
     <script src="/bootstrap/table/bootstrap-table.js"></script>
     <script src="/bootstrap/js/bootstrap-tab.js"></script>
@@ -23,26 +21,23 @@
     <link rel="stylesheet" href="/cxCalendar/css/jquery.cxcalendar.css">
 </head>
 <body>
-
 <c:import url="../utlis/background.jsp"/>
 <c:import url="../utlis/broadside.jsp"/>
 <div style="width: 1300px; height: 800px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black;">
-    <h3 style="margin-bottom: 40px">学习中心管理</h3>
+    <h3 style="margin-bottom: 40px">学习中心用户管理</h3>
     <div style="margin: 40px; margin-top: 20px; box-shadow: 0 0 4px black; height: 620px; padding: 10px;">
-        <table id="outBound_tab">
+        <table id="schooluser_tab">
         </table>
     </div>
 </div>
 
-
 </body>
-
 <script>
-    tab()
+    usertab()
 
-    function tab() {
-        $("#outBound_tab").bootstrapTable({
-            url: "/school/showSchoolenter",
+    function usertab() {
+        $("#schooluser_tab").bootstrapTable({
+            url: "/school/showSchoolUser",
             pageNumber: 1,
             pageSize: 5,
             pageList: [10, 15, 20],
@@ -67,20 +62,11 @@
                     }
                 }, {
                     field: 'slNumber',
-                    title: '学习中心编号'
+                    title: '姓名'
                 }, {
                     field: 'slSchoolName',
-                    title: '学习中心全称'
-                }, {
-                    field: 'slOuterName',
-                    title: '校外学习中心全称'
-                }, {
-                    field: 'areaName',
-                    title: '省份'
-                }, {
-                    field: 'asName',
-                    title: '区域管理中心'
-                }, {
+                    title: '用户名'
+                },{
                     field: 'slState',
                     title: '状态',
                     formatter: function (value, row, index) {
