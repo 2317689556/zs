@@ -20,8 +20,9 @@
             </div>
             <span>
                     <form action="${pageContext.request.contextPath}/user/login" method="post">
-                        <p class="form"><input type="text" id="user" placeholder="用户名"></p>
-                        <p class="form"><input type="password" id="passwd" placeholder="密码  "></p>
+                        <input name="id" id="id" hidden="hidden">
+                        <p class="form"><input type="text" name="uName" id="user" placeholder="用户名"></p>
+                        <p class="form"><input type="password" id="uPass" name="uPass" placeholder="密码  "></p>
                         <input type="submit" value="登 录" class="btn"  style="margin-right: 20px;">
                     </form>
                 </span>
