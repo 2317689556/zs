@@ -21,10 +21,10 @@
                             </li>
 
                             <li>
-                                <a>报名点管理</a>
+                                <a href="/jsps/JG/surgicalDrape.jsp">报名点管理</a>
                                 <ul>
                                     <li>
-                                        <a class="menu3">报名点用户管理</a>
+                                        <a class="menu3" href="/jsps/JG/schoolUserManage.jsp">报名点用户管理</a>
                                     </li>
                                 </ul>
                             </li>

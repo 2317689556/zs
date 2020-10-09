@@ -56,7 +56,7 @@
                 }, {
                     title: '操作',
                     formatter: function (value, row, index) {
-                        return "<a href=''>用户信息</a>"
+                        return "<a href='/jsps/JG/schoolUserManage.jsp'>用户信息</a>"
                     }
                 }
             ]
