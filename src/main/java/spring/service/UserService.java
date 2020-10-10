@@ -13,10 +13,18 @@ public class UserService {
     @Resource
     UserMapper userMapper;
 
+    /*登录*/
     public ZsUser login(ZsUser user) {
-        /*登录*/
         return userMapper.login(user);
     }
+
+    /*修改密码*/
+    public int updatePass(ZsUser zsUser){
+        int i = userMapper.updateUser(zsUser);
+        return i;
+    }
+
+
 
 
 }
