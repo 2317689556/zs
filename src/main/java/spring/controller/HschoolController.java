@@ -59,4 +59,5 @@ public class HschoolController {
         int i = hschoolService.addHschool(hschool);
         return i > 0;
     }
+    /*提交注释*/
 }
