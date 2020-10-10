@@ -1,5 +1,8 @@
 package spring.pojo;
 
+import lombok.Data;
+
+@Data
 public class ZsregionVo {
 
     private int id;

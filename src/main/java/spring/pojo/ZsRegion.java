@@ -1,12 +1,15 @@
 package spring.pojo;
 
 
+import lombok.Data;
+
 import java.util.Date;
 
 
 /**
  * 地区表 zs_region
  **/
+@Data
 public class ZsRegion {
 
     private long id;

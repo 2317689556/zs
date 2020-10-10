@@ -3,14 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="spring.dao.SyudyMapper">
-    <!--    /*查询学习中心*/-->
-    <!--    List<ZsSyudy> examineSyudy();-->
+   <!-- &lt;!&ndash;    /*查询学习中心*/&ndash;&gt;
+    &lt;!&ndash;    List<ZsSyudy> examineSyudy();&ndash;&gt;
     <select id="examineSyudy" resultType="ZsSyudy">
         select * from zs_syudy
     </select>
 
-    <!--    /*根据id查询地址*/-->
-    <!--    ZsregionVo getzsRegion(int id);-->
+    &lt;!&ndash;    /*根据id查询地址*/&ndash;&gt;
+    &lt;!&ndash;    ZsregionVo getzsRegion(int id);&ndash;&gt;
     <select id="getzsRegion" resultType="ZsregionVo">
         SELECT sec1.id aId,sec1.areaName xian,
                sec2.id cId,sec2.areaName city,
@@ -21,9 +21,9 @@
         LEFT JOIN zs_region sec3
         ON sec2.pid=sec3.id
     </select>
-    <!--    /*添加学习中心*/-->
-    <!--    int addSyudy(ZsSchool zsSchool);-->
-    <insert id="addSyudy">
+    &lt;!&ndash;    /*添加学习中心*/&ndash;&gt;
+    &lt;!&ndash;    int addSyudy(ZsSchool zsSchool);&ndash;&gt;
+    <insert id="addSchool">
         INSERT INTO`zs_school`(`sl_number`,`sl_school_name`,`sl_outer_name`,
         `sl_area_id`,`sl_district_id`,`sl_state`,`sl_start_time`,`sl_approval`,
         `sl_card1`,sl_card2,`sl_card3`)
@@ -31,8 +31,8 @@
         #{slState},#{slStartTime},#{slApproval},#{slCard1},#{slCard2},#{slCard3})
     </insert>
 
-    <!--    /*修改学习中心*/-->
-    <!--    int updateSchool(ZsSchool zsSchool);-->
+    &lt;!&ndash;    /*修改学习中心*/&ndash;&gt;
+    &lt;!&ndash;    int updateSchool(ZsSchool zsSchool);&ndash;&gt;
     <update id="updateSchool">
     UPDATE `zs_school` SET `sl_number`=#{slNumber},`sl_school_name`=#{slSchoolName},`sl_outer_name`=#{slOuterName},
     `sl_area_id`=#{slAreaId},`sl_district_id`=#{slDistrictId},`sl_state`=#{slState},`sl_start_time`=#{slStartTime},
@@ -40,16 +40,16 @@
     WHERE id=#{id}
     </update>
 
-    <!--    /*添加学习中心用户*/-->
-    <!--    int addSyudy(ZsSyudy zsSyudy);-->
+    &lt;!&ndash;    /*添加学习中心用户*/&ndash;&gt;
+    &lt;!&ndash;    int addSyudy(ZsSyudy zsSyudy);&ndash;&gt;
     <insert id="addSyudy">
     INSERT INTO `zs_syudy`(`sy_name`,`sy_username`,`sy_password`,`sy_state`,
     `sy_role`,`sy_email`,`sy_phone`,`sy_address`,`sy_nuber`)
     VALUE (#{syName},#{syUsername},#{syPassword},#{syState},#{syRole},#{syEmail},#{syPhone},#{syAddress},#{syNuber})
     </insert>
 
-    <!--    /*根据id修改学习中心用户*/-->
-    <!--    int updateSyudy(ZsSyudy zsSyudy);-->
+    &lt;!&ndash;    /*根据id修改学习中心用户*/&ndash;&gt;
+    &lt;!&ndash;    int updateSyudy(ZsSyudy zsSyudy);&ndash;&gt;
     <insert id="updateSyudy">
     insert into`zs_syudy` (id,sy_name,sy_username,`sy_password`,
     `sy_state`,`sy_role`,`sy_email`,`sy_phone`,`sy_address`,`sy_nuber`)
@@ -58,5 +58,7 @@
     UPDATE zs_syudy SET sy_name=#{syName},sy_username=#{syUsername},sy_password=#{syPassword},sy_state=#{syState},sy_role=#{syRole},
     sy_email=#{syEmail},sy_phone=#{syPhone},sy_address=#{syAddress},sy_nuber=#{syNuber} where id=#{id}
     </insert>
-
+    <select id="examineSchool" resultType="ZsSchool">
+        select *from zs_school
+    </select>-->
 </mapper>
