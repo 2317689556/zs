@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <div style="float: left; margin: 0 0 0 100px; opacity: 0.8;">
     <div class="content">
         <ul class="vertical-nav dark red" style="text-align: center;">
@@ -15,16 +16,16 @@
                                 <a  href="/jsps/JG/school.jsp">学习中心管理</a>
                                 <ul>
                                     <li>
-                                        <a class="menu3">学习中心用户管理</a>
+                                        <a href="/jsps/JG/schoolUserManage.jsp">学习中心用户管理</a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a>报名点管理</a>
+                                <a href="/jsps/JG/surgicalDrape.jsp">报名点管理</a>
                                 <ul>
                                     <li>
-                                        <a class="menu3">报名点用户管理</a>
+                                        <a class="menu3" href="/jsps/JG/schoolUserManage.jsp">报名点用户管理</a>
                                     </li>
                                 </ul>
                             </li>
@@ -33,7 +34,7 @@
                         </li>
                         <li><a href="/jsps/stockOut.jsp">学习中心信息查询</a>
                         </li>
-                        <li><a href="/jsps/surgicalDrape.jsp">报名点信息查询</a>
+                        <li><a href="/jsps/JG/surgicalDrape.jsp">报名点信息查询</a>
                         </li>
 
                         <li>

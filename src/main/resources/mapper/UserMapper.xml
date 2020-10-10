@@ -11,4 +11,12 @@
         select * from zs_user where u_name=#{uName} AND u_pass=#{uPass}
     </select>
 
+
+    <!--    /*修改User*/-->
+    <!--    int updateUser(ZsUser zsUser);-->
+    <update id="updateUser">
+    update zs_user SET u_pass=#{uPass} where id=#{id}
+    </update>
+
+
 </mapper>

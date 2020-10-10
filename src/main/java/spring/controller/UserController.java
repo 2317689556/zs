@@ -28,4 +28,18 @@ public class UserController {
             return "login";
         }
     }
+
+
+    /*修改用户密码*/
+    @RequestMapping("updatePass")
+    public int updatePass(ZsUser zsUser){
+        int i = userService.updatePass(zsUser);
+        if (i!=0){
+            return i;
+        }else {
+            return 0;
+        }
+    }
+
+
 }

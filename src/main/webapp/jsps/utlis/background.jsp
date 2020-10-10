@@ -3,7 +3,6 @@
 <link href="/css/fonts.css" rel="stylesheet">
 <script>
     var circleArr = [];
-
     //调用执行
     window.onload = function () {
         $(".vertical-nav").verticalnav({speed: 400, align: "left"});
