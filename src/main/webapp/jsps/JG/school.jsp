@@ -11,16 +11,16 @@
 <html>
 <head>
     <title>学习中心</title>
-    <script type="text/javascript" src="/static/js/jquery-3.4.1.min.js"></script>
-    <script src="/static/bootstrap/table/bootstrap-table.js"></script>
-    <script src="/static/bootstrap/js/bootstrap-tab.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.js"></script>
-    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/cxCalendar/js/jquery.cxcalendar.js"></script>
-    <script src="/static/cxCalendar/js/jquery.cxcalendar.languages.js"></script>
-    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-tab.css">
-    <link rel="stylesheet" href="/static/cxCalendar/css/jquery.cxcalendar.css">
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+    <script src="/bootstrap/table/bootstrap-table.js"></script>
+    <script src="/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="/bootstrap/js/bootstrap.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/cxCalendar/js/jquery.cxcalendar.js"></script>
+    <script src="/cxCalendar/js/jquery.cxcalendar.languages.js"></script>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-tab.css">
+    <link rel="stylesheet" href="/cxCalendar/css/jquery.cxcalendar.css">
 </head>
 <body>
 

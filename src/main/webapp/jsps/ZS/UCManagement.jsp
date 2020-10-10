@@ -17,11 +17,12 @@
     <script>
         $(function () {
             $("#tab1").bootstrapTable({
-                url: "/user/userFandAll",
+                url: "/hschool/HschoolFandAll",
                 method: "get",
                 contentType: "application/x-www-form-urlencoded; charset=UTF-8",
-                sidePagination: "server",
-                pageSize: 8,
+                pagination:true,
+                sidePagination: "client",
+                pageSize: 5,
                 columns: [
                     {
                         field: 'id',
@@ -51,10 +52,28 @@
 <body>
 <c:import url="../utlis/background.jsp"/>
 <c:import url="../utlis/broadside.jsp"/>
-<div style="width: 1300px; height: 800px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black; text-align: left;">
+
+<div style="width: 1300px; height: 800px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black;">
     <center><h3 style="margin-bottom: 40px">招生管理</h3></center>
-    <a href="javascript:ovid()" id="ads_add" class="btn btn-primary" style="margin: 0 0 0 40px">添加</a>
-    <div class="sort_list" style="margin: 40px; margin-top: 20px; box-shadow: 0 0 4px black; height: 620px; padding: 10px">
+    <div style="width: 1000px;height: 100px;">
+    <div style="width: 300px;float: left;margin-left: 50px">
+    <span style="float: left; font-size: 17px; line-height: 34px; margin-left: 40px; ">高校编码：</span>
+        <input class="form-control date_1" id="date_1"  style="width: 150px; float: left;" onchange="shuaXin()">
+    </div>
+
+    <div style="width: 300px;float: left;margin-left: 50px">
+    <span style="float: left; font-size: 17px; line-height: 34px; margin-left: 50px;">高校名称：</span>
+    <input class="form-control date_1" id="date_2"  style="width: 150px;" onchange="shuaXin()">
+    </div>
+    <div style="width: 200px;float: left;margin-left: 50px">
+        <a href="javascript:ovid()" id="cha" class="btn btn-primary">查询</a>
+    </div>
+    </div>
+
+    <div style="margin-left: 100px;float: left;">
+        <a href="javascript:ovid()" id="ads_add" class="btn btn-primary" style="clear: both">添加</a>
+    </div>
+    <div class="sort_list" style="margin: 40px; margin-top: 10px; box-shadow: 0 0 4px black; height: 400px; padding: 10px;margin-top: 50px">
         <table id="tab1"></table>
     </div>
 </div>
@@ -70,16 +89,16 @@
                 <h4 class="modal-title" id="myModalLabel">添加</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" role="form" action="##" id="adduser2">
+                <form class="form-horizontal" role="form" action="##" id="addHschool">
                     <div class="form-group">
                         <div class="col-sm-7" id="div01">
-                            <input type="hidden" id="addareaId" name='userId'/>
+                            <input type="hidden" id="addHschhoolId" name='ZsHschoolId'/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-3 control-label">高校编码</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="addusername" name="username"/>
+                            <input type="text" class="form-control" id="HschoolhlNumber" name="hlNumber"/>
                         </div>
                         <div class="col-sm-2">
                             <span></span>
@@ -89,7 +108,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">高校名称</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="password" name="password"/>
+                            <input type="text" class="form-control" id="HschoolhlName" name="hlName"/>
                         </div>
                         <div class="col-sm-2">
                             <span></span>
@@ -98,7 +117,7 @@
 
                     <div class="form-group">
                         <div class="col-sm-offset-4 col-sm-10" style="text-align: right; margin-top: 30px;">
-                            <button id="sendMail" onclick="addUser2()" type="button" class="btn btn-primary">提交</button>
+                            <button id="sendMail" onclick="addHschool()" type="button" class="btn btn-primary">提交</button>
                             <button type="reset" class="btn btn-primary" style="margin: 0 100px 0 1em">重置</button>
                         </div>
                     </div>
@@ -120,7 +139,7 @@
                 <h4 class="modal-title">修改</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" role="updateForm" action="##" id="updateUser4">
+                <form class="form-horizontal" role="updateForm" action="##" id="updatehschool">
                     <div class="form-group">
                         <div class="col-sm-7" id="div02">
                             <input type="hidden" id="updateuserId" name='id'/>
@@ -129,7 +148,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">高校编码</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="updateuserName" name="username"/>
+                            <input type="text" class="form-control" id="updatehlNumber" name="hlNumber"/>
                         </div>
                         <div class="col-sm-2">
                             <span></span>
@@ -138,7 +157,7 @@
                     <div class="form-group">
                         <label class="col-sm-3 control-label">高校名称</label>
                         <div class="col-sm-7">
-                            <input type="text" class="form-control" id="updatepassword" name="password"/>
+                                    <input type="text" class="form-control" id="updatehlName" name="hlName"/>
                         </div>
                         <div class="col-sm-2">
                             <span></span>
@@ -178,14 +197,14 @@
         $("#myModalAdd2").modal("show");
     });
 
-    function addUser2() {
+    function addHschool() {
 
-        var form = new FormData($("#adduser2")[0]);
+        var form = new FormData($("#addHschool")[0]);
         $.ajax({
             //几个参数需要注意一下
             type: "post",//方法类型
             dataType: "json",//预期服务器返回的数据类型
-            url: "${pageContext.request.contextPath}/user/addUser",//url
+            url: "${pageContext.request.contextPath}/hschool/addHschool",//url
             data: form,
             processData: false,
             contentType: false,
@@ -206,14 +225,14 @@
         alert(id)
         $.ajax({
             type: "post",
-            url: "${pageContext.request.contextPath}/user/findUserById",
+            url: "${pageContext.request.contextPath}/hschool/findHschoolById",
             data: {"id": id},
             dataType: "json",
             success: function (data) {
                 $("#myModalUpdate3").modal("show");
                 $("#updateuserId").val(data.id);
-                $("#updateuserName").val(data.username);
-                $("#updatepassword").val(data.password);
+                $("#updatehlNumber").val(data.hlNumber);
+                $("#updatehlName").val(data.hlName);
                 $("option[value=" + data.gradeId + "]").attr("selected", true);
             },
             error: function (msg) {
@@ -224,13 +243,13 @@
     /* 修改 */
     function updateUser3() {
         debugger
-        var form = new FormData($("#updateUser4")[0]);
+        var form = new FormData($("#updatehschool")[0]);
 
         $.ajax({
             //几个参数需要注意一下
             type: "post",//方法类型
             dataType: "json",//预期服务器返回的数据类型
-            url: "${pageContext.request.contextPath}/user/updateUser",//url
+            url: "${pageContext.request.contextPath}/hschool/updatehschool",//url
             data: form,
             processData: false,
             contentType: false,
@@ -263,7 +282,7 @@
         $.ajax({
             type:"post",
             dataType:"json",
-            url:"${pageContext.request.contextPath}/user/deleteUser",
+            url:"${pageContext.request.contextPath}/hschool/deleteHschool",
             data:{"id":id},
             success:function () {
                 alert("删除成功")
