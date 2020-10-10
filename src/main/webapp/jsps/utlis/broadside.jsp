@@ -29,25 +29,6 @@
                                     </li>
                                 </ul>
                             </li>
-
-                        <li><a href="/jsps/purchaseRequest.jsp">奥鹏学习中心维护</a>
-                        </li>
-                        <li><a href="/jsps/stockOut.jsp">学习中心信息查询</a>
-                        </li>
-                        <li><a href="/jsps/JG/surgicalDrape.jsp">报名点信息查询</a>
-                        </li>
-
-                        <li>
-                            <a>区域管理中心信息管理</a>
-                            <ul>
-                                <li>
-                                    <a class="menu3">区域管理中心用户管理</a>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li><a href="/jsps/abnormal.jsp">学习中心基本信息</a>
-                        </li>
                     </ul>
                 </li>
         <%-- </c:if>--%>
@@ -93,12 +74,6 @@
                                       <a class="menu3">身份证读取信息统计</a>
                                   </li>
                                   <li>
-                                      <a class="menu3">异地生源申请</a>
-                                  </li>
-                                  <li>
-                                      <a class="menu3">异地生源审核</a>
-                                  </li>
-                                  <li>
                                       <a class="menu3">报名信息录入</a>
                                   </li>
                                   <li>
@@ -133,11 +108,7 @@
                     </li>
                     <li><a href="/jsps/stockOut.jsp">新生录取管理</a>
                     </li>
-                    <li><a href="/jsps/surgicalDrape.jsp">奥鹏学生信息导入</a>
-                    </li>
                     <li><a href="/jsps/abnormal.jsp">录取信息查询</a>
-                    </li>
-                    <li><a href="/jsps/abnormal.jsp">录取通知书打印</a>
                     </li>
                     <li><a href="/jsps/abnormal.jsp">录取通知书打印情况查询</a>
                     </li>

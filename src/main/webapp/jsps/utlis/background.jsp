@@ -7,7 +7,7 @@
     window.onload = function () {
         $(".vertical-nav").verticalnav({speed: 400, align: "left"});
         //定义画布宽高和生成点的个数
-        var WIDTH = window.innerWidth, HEIGHT = window.innerHeight, POINT = 150;
+        var WIDTH = window.innerWidth, HEIGHT = window.innerHeight, POINT = 50;
 
         var canvas = document.getElementById('Mycanvas');
         canvas.width = WIDTH,
