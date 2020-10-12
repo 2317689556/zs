@@ -62,7 +62,6 @@
         <input type="" name=" ">
     </div>
 
-
     <div style="float: left;margin-left: 20px;margin-top: 20px">
         <button class="btn btn-primary">查询</button>
     </div>
