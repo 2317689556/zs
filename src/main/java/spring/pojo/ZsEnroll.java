@@ -22,9 +22,11 @@ public class ZsEnroll {
     private Integer elStatus;//录取状态 1录取，-1不录取
     private Date elEnrollTime;//录取时间
     private Integer elInform;//录取通知书 1有，-1没有
-    private String elEmpty1;
+    private Integer elAllow;//是否允许招生  1允许，-1不允许
     private String elEmpty2;
     private String elEmpty3;
     private String elEmpty4;
     private String elEmpty5;
+    private String slNum;
+    private String slName;
 }

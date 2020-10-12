@@ -66,7 +66,7 @@
     <input class="form-control date_1" id="date_2"  style="width: 150px;" onchange="shuaXin()">
     </div>
     <div style="width: 200px;float: left;margin-left: 50px">
-        <a href="javascript:ovid()" id="cha" class="btn btn-primary">查询</a>
+        <button id="chaxun" onclick="cha()" type="button" class="btn btn-primary">查询</button>
     </div>
     </div>
 
@@ -293,4 +293,5 @@
             }
         })
     }
+
 </script>

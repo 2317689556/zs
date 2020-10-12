@@ -12,7 +12,7 @@ import java.util.Date;
 public class ZsSchool {
 
     private Integer id;
-    private String slNumber;//编号
+    private String slNumber;//学习中心编号
     private String slSchoolName;//学习中心全称
     private String slOuterName;//校外学习中心全称
     private Integer slAreaId;//地区

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spring.dao.WZsenrollMapper">
+
+
+    <!--/学习中心管理全查
+    List<ZsEnroll> whschoolFandAll();-->
+    <select id="whschoolFandAll" resultType="ZsEnroll">
+        select
+        sc.sl_number slNum,sc.sl_school_name slName,
+        en.el_batch,en.el_gradation,en.el_major,en.el_allow,en.id
+        from
+        zs_school sc,zs_enroll en
+        WHERE
+        sc.id=en.el_zs_school_id
+    </select>
+
+    <!--
+    //学习中心修改是否允许招生
+    int updatewZcenroll(Integer id);-->
+    <!--允许-->
+    <update id="updatewZcenroll">
+        update zs_enroll set
+         el_allow=1
+         where
+         id=#{id}
+    </update>
+
+    <!--
+    //学习中心修改是否允许招生
+    int updatewZcenroll(Integer id);-->
+    <!--不允许-->
+    <update id="updatewZcenroll2">
+        update zs_enroll set
+         el_allow=-1
+         where
+         id=#{id}
+    </update>
+
+</mapper>
