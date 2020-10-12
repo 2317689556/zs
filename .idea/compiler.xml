@@ -7,10 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="cat_project" />
         <module name="zs" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="cat_project" target="1.8" />
       <module name="zs" target="1.7" />
     </bytecodeTargetLevel>
   </component>
