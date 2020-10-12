@@ -52,7 +52,7 @@
                 <h4 class="modal-title" id="myModalLabel">学习中心用户添加</h4>
             </div>
             <div class="modal-body">
-                <form class="form-horizontal" role="form" action="##" id="adduser2">
+                <form class="form-horizontal" role="form" action="##" id="addSchoolUser1">
                     <div class="form-group">
                         <div class="col-sm-7" id="div01">
                             <input type="hidden" id="addareaId" name='userId'/>
@@ -119,6 +119,128 @@
         </div>
     </div>
 </div>
+
+<!-- 修改 -->
+<div class="modal fade" id="editSchoolUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">修改</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="editUserForm" action="##" id="editSchoolUser">
+                    <div class="form-group">
+                        <div class="col-sm-7" id="div02">
+                            <input type="hidden" id="editId" name='id'/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">用户名：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="susername" name="syUsername" />
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">姓名：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="sName" name="syName" disabled/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">状态：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="sState" name="syState" disabled/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-10">
+                            <button type="button" onclick="UpdateSchoolUser()" class="btn btn-primary">确定修改
+                            </button>
+                            <button type="reset" class="btn btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 重置密码 -->
+<div class="modal fade" id="changePassModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">修改</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="editUserForm" action="/school/changePassword" id="changePass">
+                    <div class="form-group">
+                        <div class="col-sm-7" id="div1">
+                            <input type="hidden" id="changeId" name='id'/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">姓名：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="name" name="syName" disabled/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">用户名：</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" id="username" name="syUsername" disabled/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">密码：</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="passowrd" name="syPassword"/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">确认密码：</label>
+                        <div class="col-sm-7">
+                            <input type="password" class="form-control" id="rePassowrd"/>
+                        </div>
+                        <div class="col-sm-2">
+                            <span></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-10">
+                            <button type="button" onclick="sendForm()" class="btn btn-primary">确定修改
+                            </button>
+                            <button type="reset" class="btn btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 <script>
     usertab()
@@ -162,9 +284,9 @@
                 }, {
                     title: '操作',
                     formatter: function (value, row, index) {
-                        return "<button><a href=''>编辑</a></button>"+
-                            "<button><a href=''>删除</a></button>"+
-                            "<button><a href=''>重置密码</a></button>"
+                        return "<button class='btn btn-primary'><a style='color: white' onclick='editSchoolUser("+row.id+")'>编辑</a></button>"+
+                            "<button class='btn btn-primary'><a style='color: white' onclick='deleteSchoolUser("+row.id+")'>删除</a></button>"+
+                            "<button class='btn btn-primary'><a style='color: white' onclick='changePass("+row.id+")'>重置密码</a></button>"
                     }
                 }
             ]
@@ -178,7 +300,7 @@
         $("#addUserModal").modal("show");
     });
     function addSchoolUser() {
-        var data = new FormData($("#addSchoolUser")[0]);
+        var data = new FormData($("#addSchoolUser1")[0]);
         $.ajax({
             type: "post",
             dataType: "json",
@@ -198,6 +320,142 @@
 
     }
 
+    //修改查询
+    function editSchoolUser(id) {
+        $.ajax({
+            url:'/school/editSchoolUser',
+            data:{id:id},
+            dataType:'json',
+            type:'post',
+            success:function (data) {
+                if (data){
+                    $("#editSchoolUserModal").modal("show");
+                    $("#editId").val(data.id);
+                    $("#susername").val(data.syUsername);
+                    $("#sName").val(data.syName);
+                    $("#sState").val(data.syState);
+                }else {
+                    alert("出错了")
+                }
+            },
+            error:function (data) {
+                alert("Error")
+            }
+        })
+    }
+    //修改
+    function UpdateSchoolUser() {
+        var formData = new FormData($("#editSchoolUser")[0]);
+        $.ajax({
+            type:'post',
+            url:'/school/UpdateSchoolUser',
+            data:formData,
+            dataType:'json',
+            processData: false,
+            contentType: false,
+            success:function (data) {
+                if (data){
+                    $("#editSchoolUserModal").modal("hide");
+                    alert("修改成功")
+                    window.location.reload();
+                }else {
+                    alert("出错了")
+                }
+            },
+            error:function (data) {
+                alert("Error")
+            }
+        })
+    }
 
+    //删除用户
+    function deleteSchoolUser(id) {
+        $.ajax({
+            type:"post",
+            dataType:"json",
+            url:"/school/deleteSchoolUser",
+            data:{"id":id},
+            success:function () {
+                alert("删除成功")
+                window.location.reload();
+            },
+            error: function () {
+                alert("失败了");
+            }
+        })
+
+    }
+
+
+    //重置密码查询
+    function changePass(id) {
+        $.ajax({
+            url:'/school/editSchoolUser',
+            data:{id:id},
+            dataType:'json',
+            type:'post',
+            success:function (data) {
+                if (data){
+                    $("#changePassModal").modal("show");
+                    $("#changeId").val(data.id);
+                    $("#username").val(data.syUsername);
+                    $("#name").val(data.syName);
+                    $("#passowrd").val(data.syPassword);
+                }else {
+                    alert("出错了")
+                }
+            },
+            error:function (data) {
+                alert("Error")
+            }
+        })
+    }
+
+    $(function () {
+        //密码操作
+        $("#password").focus(function () {
+            $(this).val("");
+            $("#rePassword").val("");
+        });
+        $("#password").blur(function () {
+            var password=$(this).val();
+            if(!(/^\S{6,20}$/.test(password))){
+                setError($(this),"密码由3-6位字母，数字和符号组合，区分大小写!");
+            }else{
+                setOk($(this));
+            }
+        });
+        //确认密码
+        $("#rePassword").blur(function () {
+            var password=$("#password").val();
+            var rePassword=$(this).val();
+            if(null!=rePassword && rePassword==password){
+                setOk($(this));
+            }else{
+                setError($(this),"确认密码和密码不一致，请重新输入！");
+            }
+        });
+    })
+    
+    function sendForm() {
+        $("#changePass").submit();
+    }
+
+    function setOk(obj){
+        var _pdiv=obj.parents().parents(".form-group");
+        if(_pdiv.hasClass("has-error")){
+            _pdiv.removeClass("has-error");
+        }
+        _pdiv.addClass("has-success");
+        obj.parents().nextAll("span.help-block").html("&nbsp;");
+    }
+    function setError(obj,str){
+        var _pdiv=obj.parents().parents(".form-group");
+        if(_pdiv.hasClass("has-success")){
+            _pdiv.removeClass("has-success");
+        }
+        _pdiv.addClass("has-error");
+        obj.parents().nextAll("span.help-block").html(str);
+    }
 </script>
 </html>

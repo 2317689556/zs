@@ -1,6 +1,5 @@
 package spring.dao;
 
-import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;
 
@@ -16,9 +15,15 @@ public interface SchoolMapper {
     //添加学习中心用户
     int addSchoolUser(ZsSyudy zsSyudy);
 
-    /*省的查询*/
-    List<ZsRegion> shengAll();
+    //编辑查询
+    ZsSyudy editSchoolUser(Integer id);
 
-    /*市的查询*/
-    List<ZsRegion> shiAll(Integer pid);
+    //编辑用户
+    int UpdateSchoolUser(ZsSyudy zsSyudy);
+
+    //删除用户
+    int deleteSchoolUser(Integer id);
+
+    //重置密码
+    int changePassword(ZsSyudy zsSyudy);
 }

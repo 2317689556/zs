@@ -26,13 +26,54 @@
 
 <c:import url="../utlis/background.jsp"/>
 <c:import url="../utlis/broadside.jsp"/>
-<div style="width: 1300px; height: 800px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black;">
-    <h3 style="margin-bottom: 40px">学习中心管理</h3>
-    <div style="margin: 40px; margin-top: 20px; box-shadow: 0 0 4px black; height: 620px; padding: 10px;">
+<div style="width: 1300px; height: 1000px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black;">
+    <h3 style="">学习中心管理</h3>
+        <div style="float: left;margin-left: 20px;margin-top: 20px">
+            <label>省份</label>
+            <select style="width: 150px;height: 30px">
+                <option>-请选择-</option>
+                <option>选择一</option>
+                <option>选择二</option>
+            </select>
+        </div>
+        <div style="float: left;margin-left: 20px;margin-top: 20px">
+            <label>城市</label>
+            <select style="width: 150px;height: 30px">
+                <option>-请选择-</option>
+                <option>选择一</option>
+                <option>选择二</option>
+            </select>
+        </div>
+        <div style="float: left;margin-left: 20px;margin-top: 20px">
+            <label>区域管理中心</label>
+            <select style="width: 150px;height: 30px">
+                <option>-请选择-</option>
+                <option>选择一</option>
+                <option>选择二</option>
+            </select>
+        </div>
+
+        <div style="float: left;margin-left: 20px;margin-top: 20px">
+            <label>状态</label>
+            <input type="" name=" ">
+        </div>
+        <div style="float: left;margin-left: 20px;margin-top: 20px">
+            <label>学习中心编号</label>
+            <input type="" name=" ">
+        </div>
+
+
+        <div style="float: left;margin-left: 20px;margin-top: 20px">
+            <button class="btn btn-primary">查询</button>
+        </div>
+
+
+    <div style="margin: 40px; margin-top: 120px; box-shadow: 0 0 4px black; height: 620px; padding: 10px;">
         <table id="outBound_tab">
         </table>
     </div>
 </div>
+
 
 
 </body>
@@ -53,11 +94,7 @@
             //发送到服务器的数据编码类型，设置form表单传输编码
             contentType: "aplication/x-www-form-urlencoded;charset=UTF-8",
             striped: true,//斑马线
-           /* queryParams: function () {
-                return {
-                    id: $("#tab_id").val(),
-                }
-            },*/
+
             columns: [
                 {
                     field: 'id',
@@ -93,10 +130,10 @@
                 }, {
                     title: '操作',
                     formatter: function (value, row, index) {
-                        return "<button><a href=''>编辑</a></button>"+
-                            "<button><a href=''>删除</a></button>"+
-                            "<button><a href='/jsps/JG/schoolUserManage.jsp'>用户管理</a></button>"+
-                            "<button><a href=''>报名点管理</a></button>"
+                        return "<button class='btn btn-primary'><a href='' style='color: white'>编辑</a></button>"+
+                            "<button class='btn btn-primary'><a href='' style='color: white'>删除</a></button>"+
+                            "<button class='btn btn-primary'><a href='/jsps/JG/schoolUserManage.jsp' style='color: white'>用户管理</a></button>"+
+                            "<button class='btn btn-primary'><a href='' style='color: white'>报名点管理</a></button>"
                     }
                 }
             ]

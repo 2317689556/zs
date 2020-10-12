@@ -2,7 +2,6 @@ package spring.service;
 
 import org.springframework.stereotype.Service;
 import spring.dao.SchoolMapper;
-import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;
 
@@ -26,14 +25,19 @@ public class SchoolService {
         return schoolMapper.addSchoolUser(zsSyudy);
     }
 
-    /*省的查询*/
-    public List<ZsRegion> shengAll() {
-        return schoolMapper.shengAll();
+    public ZsSyudy editSchoolUser(Integer id) {
+        return schoolMapper.editSchoolUser(id);
     }
 
-    /*市的查询*/
-    public List<ZsRegion> shiAll(Integer pid) {
-        return schoolMapper.shiAll(pid);
+    public int UpdateSchoolUser(ZsSyudy zsSyudy) {
+        return schoolMapper.UpdateSchoolUser(zsSyudy);
     }
 
+    public int deleteSchoolUser(Integer id) {
+        return schoolMapper.deleteSchoolUser(id);
+    }
+
+    public int changePassword(ZsSyudy zsSyudy) {
+        return schoolMapper.changePassword(zsSyudy);
+    }
 }

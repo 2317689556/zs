@@ -27,18 +27,37 @@
          insert into zs_syudy (id,sy_name,sy_username,sy_password,sy_state,sy_email,sy_phone)
         values
             (null,#{syName},#{syUsername},#{syPassword},0,#{syEmail},#{syPhone})
+
     </insert>
 
-    <!--省的查询-->
-    <!--List<ZsRegion> shengAll();-->
-    <select id="shengAll" resultType="ZsRegion">
-        select * from zs_region WHERE pid=1
+    <!--  //编辑查询
+    int editSchoolUser(Integer id);-->
+    <select id="editSchoolUser" resultType="ZsSyudy">
+        select * from zs_syudy where id=#{id}
     </select>
 
-    <!--市的查询-->
-    <!--List<ZsRegion> shiAll(Integer pid);-->
-    <select id="shiAll" resultType="ZsRegion">
-        select areaName,id from zs_region WHERE pid=#{pid}
-    </select>
+    <!-- //编辑用户
+    int UpdateSchoolUser(ZsSyudy zsSyudy);-->
+    <update id="UpdateSchoolUser" parameterType="ZsSyudy">
+       update zs_syudy set
+         sy_username=#{syUsername}
+         where
+         id=#{id}
+    </update>
+
+    <!--//删除用户
+    int deleteSchoolUser(Integer id);-->
+    <delete id="deleteSchoolUser">
+        delete from zs_syudy where id=#{id}
+    </delete>
+
+    <!--//重置密码
+    int changePassword(ZsSyudy zsSyudy);-->
+    <update id="changePassword" parameterType="ZsSyudy">
+       update zs_syudy set
+         sy_password=#{syPassword}
+         where
+         id=#{id}
+    </update>
 
 </mapper>
