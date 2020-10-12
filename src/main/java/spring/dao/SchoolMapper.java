@@ -26,4 +26,7 @@ public interface SchoolMapper {
 
     //重置密码
     int changePassword(ZsSyudy zsSyudy);
+
+    //删除学习中心
+    int delSchoolCenter(Integer id);
 }

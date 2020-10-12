@@ -40,4 +40,8 @@ public class SchoolService {
     public int changePassword(ZsSyudy zsSyudy) {
         return schoolMapper.changePassword(zsSyudy);
     }
+
+    public int delSchoolCenter(Integer id) {
+        return schoolMapper.delSchoolCenter(id);
+    }
 }

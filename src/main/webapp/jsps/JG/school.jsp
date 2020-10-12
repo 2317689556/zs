@@ -96,16 +96,16 @@
     function tab() {
         $("#outBound_tab").bootstrapTable({
             url: "/school/showSchoolenter",
-            pageNumber: 1,
-            pageSize: 5,
-            pageList: [10, 15, 20],
-            pagination: true,
-            sidePagination: 'client', //客户端分页    服务端分页'server'
+            pageNumber:1,
+            pageSize:5,
+            pageList:[5,10,15],
+            pagination:true,
+            sidePagination:'client',  //客户端分页'client'    服务端分页'server'
             //post提交，默认不写get
-            mehtod: 'post',
+            mehtod:'post',
             //发送到服务器的数据编码类型，设置form表单传输编码
-            contentType: "aplication/x-www-form-urlencoded;charset=UTF-8",
-            striped: true,//斑马线
+            contentType:"aplication/x-www-form-urlencoded;charset=UTF-8",
+            striped:true,//斑马线
 
             columns: [
                 {
@@ -142,10 +142,10 @@
                 }, {
                     title: '操作',
                     formatter: function (value, row, index) {
-                        return "<button class='btn btn-primary'><a href='' style='color: white'>编辑</a></button>" +
-                            "<button class='btn btn-primary'><a onclick='delSchoolenter()' style='color: white'>删除</a></button>" +
+                        return "<button class='btn btn-primary'><a href='/jsps/JG/schoolUpdate.jsp' style='color: white'>编辑</a></button>" +
+                            "<button class='btn btn-primary'><a onclick='delSchoolCenter("+row.id+")' style='color: white'>删除</a></button>" +
                             "<button class='btn btn-primary'><a href='/jsps/JG/schoolUserManage.jsp' style='color: white'>用户管理</a></button>" +
-                            "<button class='btn btn-primary'><a href='' style='color: white'>报名点管理</a></button>"
+                            "<button class='btn btn-primary'><a href='/jsps/JG/surgicalDrape.jsp' style='color: white'>报名点管理</a></button>"
                     }
                 }
             ]
@@ -157,9 +157,31 @@
         location.href = "/jsps/JG/schoolAdd.jsp"
     }
     
-    function delSchoolenter() {
-
+    function delSchoolCenter(id) {
+        var msg = "确定删除吗？";
+        if (confirm(msg)==true){
+            $.ajax({
+                url:'/school/delSchoolCenter',
+                type:'post',
+                data:{"id":id},
+                dataType:'json',
+                success:function (data) {
+                    if (data){
+                        alert("删除成功")
+                        window.location.reload();
+                    }else {
+                        alert("出错了")
+                    }
+                },
+                error:function (data) {
+                    alert("Error")
+                }
+            })
+        }else{
+            return false;
+        }
     }
+
 
 </script>
 </html>

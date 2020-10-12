@@ -8,10 +8,16 @@
     <!-- List<ZsSchool> showSchoolenter();-->
     <!--展示学习中心-->
     <select id="showSchoolenter" resultType="ZsSchool">
-        SELECT sc.sl_number,sc.sl_school_name,sc.sl_outer_name,sc.sl_state,re.areaName,ad.as_name
+        SELECT sc.id,sc.sl_number,sc.sl_school_name,sc.sl_outer_name,sc.sl_state,re.areaName,ad.as_name
         FROM zs_school sc,zs_region re,zs_address ad
         WHERE sc.sl_area_id=re.id AND ad.id=sc.sl_district_id
     </select>
+
+    <!--//删除学习中心
+    int delSchoolCenter(Integer id);-->
+    <delete id="delSchoolCenter">
+        delete from zs_school where id=#{id}
+    </delete>
 
 
     <!--List<ZsSyudy> showSchoolUser();-->

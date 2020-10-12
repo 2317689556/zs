@@ -39,7 +39,7 @@ public class surgicalDrapeController {
 
         //参数列表
         String [] params=new String[1];
-        params[0]=user.getUName();
+        params[0]=user.getuName();
         //导出数据的列表`
         List<ZsDot> list=ss.surgicalDrapeTable();
         for (ZsDot ll:list){

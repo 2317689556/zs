@@ -25,6 +25,15 @@ public class SchoolController {
         return list;
     }
 
+    //删除学习中心
+    @RequestMapping("/delSchoolCenter")
+    @ResponseBody
+    public int delSchoolCenter(Integer id){
+
+        int i = schoolService.delSchoolCenter(id);
+        return i;
+    }
+
 
     //学习中心用户管理
     @ResponseBody
