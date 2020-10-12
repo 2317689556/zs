@@ -13,9 +13,9 @@ public class ZsDot {
     private Integer dtNumber;//报点编号
     private String dtName;//名称
     private String dtAddress;//地址
+    private String scname;
     private String dtState;//状态，启用1，禁用0
     private String dtSchoolId;//学习中心表id关连字段
-    private String dtEmpty2;
     private String dtEmpty3;
     private String dtEmpty4;
     private String dtEmpty5;
