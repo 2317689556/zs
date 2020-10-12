@@ -61,4 +61,11 @@
     <select id="examineSchool" resultType="ZsSchool">
         select *from zs_school
     </select>-->
+
+   <!--用户名检测-->
+    <!--int nameFindByName(String syUsername);-->
+   <select id="nameFindByName" resultType="int">
+      SELECT COUNT(Sy_username) from zs_syudy where Sy_username=#{syUsername}
+   </select>
+
 </mapper>

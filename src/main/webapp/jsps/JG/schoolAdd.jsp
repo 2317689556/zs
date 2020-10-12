@@ -87,30 +87,6 @@
                 </div>
             </div>
 
-            <div style="margin-left:121px;margin-top:5px; width: 540px;height: 35px">
-                <div style="float: left;">区域管理中心&nbsp;&nbsp;&nbsp;
-                    <select style="width: 200px">
-                        <option>-请选择-</option>
-                        <option>选择一</option>
-                        <option>选择二</option>
-                    </select>
-                </div>
-            </div>
-
-            <div style="margin-left:120px;margin-top:5px; width: 540px;height: 35px">
-                <div style="float: left">
-                    状态
-                </div>
-                <div style="float: left; width: 30%;" class="mui-radio">
-                    <label>启用</label>
-                    <input id="Gender_male" name="gender" class="gender" type="radio" checked="true"/>
-                </div>
-                <div style="float: left; width: 30%" class="mui-radio">
-                    <label>停用</label>
-                    <input id="Gender_female" name="gender" class="gender" type="radio">
-                </div>
-            </div>
-
             <br><br>
             <div style="height: 10px;width: 220px"><span class="glyphicon glyphicon-pushpin"></span><strong style="font-size: 18px;font-style: oblique">学习中心联系信息</strong></div>
             <div style="width: 1000px">
@@ -196,27 +172,15 @@
                 </div>
             </div>
 
-            <div style="margin-left: 105px; margin-top:5px; width: 700px;height: 35px">
+            <div style="margin-left: 90px; margin-top:5px; width: 700px;height: 35px">
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px;width: 100px"><i style="color: red">*</i>&nbsp;依托单位性质</div>
 
                     <div class="col-lg-6" style="float: left;width: 300px">
-                        <div class="input-group">
-                            <input type="text" class="form-control" style="height: 27px">
-                            <div class="input-group-btn">
-                                <select type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" style="height: 27px">
-                                    <option>-请选择-</option>
-                                    <option>功能</option>
-                                    <option>另一个功能</option>
-                                    <option>其他</option>
-                                </select>
-                            </div><!-- /btn-group -->
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" style="height: 27px;width: 200px;">
                         </div><!-- /input-group -->
                     </div><!-- /.col-lg-6 -->
-
-                    <div class="col-sm-10" style="float: left;width: 110px">
-                        <input type="text" class="form-control" id="13" style="width: 120px;height: 27px">
-                    </div>
                 </div>
             </div>
 
@@ -272,10 +236,10 @@
                 <div class="form-group" style="width: 600px;">
                     <div style="float: left;margin-top: 3px;width: 80px"><i style="color: red">*</i>&nbsp;用户名</div>
                     <div class="col-sm-10" style="float: left;width: 200px">
-                        <input type="text" class="form-control" id="18" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="18" name="syUsername" style="width: 200px;height: 27px">
                     </div>
                     <div style="float: left;width: 150px">
-                        <button type="button" style="height: 30px" class="btn btn-info">用户名检测</button>
+                        <button type="button" style="height: 30px" class="btn btn-info" onclick="XuXi()">用户名检测</button>
                     </div>
                 </div>
             </div>
@@ -298,7 +262,7 @@
                 </div>
             </div>
 
-            <br><br>
+            <%--<br><br>
             <div style="height: 10px;width: 220px"><span class="glyphicon glyphicon-pushpin"></span><strong style="font-size: 18px;font-style: oblique">报名点基本信息</strong></div>
             <div style="width: 1000px">
                 <hr style="color: red">
@@ -392,7 +356,7 @@
                 <div class="form-group" style="width: 600px;">
                     <div style="float: left;margin-top: 3px;width: 80px"><i style="color: red">*</i>&nbsp;用户名</div>
                     <div class="col-sm-10" style="float: left;width: 200px">
-                        <input type="text" class="form-control" id="30" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="30" name="" style="width: 200px;height: 27px">
                     </div>
                     <div style="float: left;width: 150px">
                         <button type="button" style="height: 30px" class="btn btn-info">用户名检测</button>
@@ -416,7 +380,7 @@
                         <input type="text" class="form-control" id="32" style="width: 200px;height: 27px">
                     </div>
                 </div>
-            </div>
+            </div>--%>
 
             <br><br><br>
             <div style="height: 10px;width: 320px;margin-left: 400px"><span class="glyphicon glyphicon-folder-open"></span><strong style="font-size: 18px;font-style: oblique">&nbsp;北京学习中心三证合一证明材料</strong></div>
@@ -534,6 +498,23 @@
 </body>
 
 <script type="text/javascript">
+
+    /*用户名检测*/
+    function XuXi(){
+        /*var syUsername=document.getElementsByName('syUsername');*/
+        var syUsername = $('input[name="syUsername"]').val();
+        $.ajax({
+            url:"/syudy/nameFindByName?syUsername=" + syUsername,
+            type: "post",
+            success: function(data){
+                if(data.msg=="suc"){
+                    alert("用户名可以使用");
+                }else if(data.msg=="error"){
+                    alert("用户名重复");
+                }
+            }
+        })
+    }
 
 
 

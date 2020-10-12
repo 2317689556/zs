@@ -77,4 +77,5 @@ public class SchoolController {
         return "redirect:/jsps/JG/schoolUserManage.jsp";
 
     }
+
 }

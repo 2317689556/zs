@@ -16,7 +16,18 @@ public class SyudyService {
     @Resource
     SyudyMapper syudyMapper;
 
-   /* *//*查询学习中心用户*//*
+    public Integer nameFindByName(String syUsername) {
+        return syudyMapper.nameFindByName(syUsername);
+    }
+
+
+
+    /*用户名检测*/
+    
+
+
+
+    /* *//*查询学习中心用户*//*
     public List<ZsSyudy> examineSyudy(){
         List<ZsSyudy> zsSyudies = syudyMapper.examineSyudy();
         return zsSyudies;

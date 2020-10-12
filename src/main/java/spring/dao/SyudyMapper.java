@@ -9,6 +9,11 @@ import java.util.List;
 
 public interface SyudyMapper {
 
+
+
+    /*用户名检测*/
+    Integer nameFindByName(String syUsername);
+
     /*查询学习中心用户*//*
     List<ZsSyudy> examineSyudy();
 

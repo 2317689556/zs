@@ -1,7 +1,9 @@
 package spring.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;
@@ -10,7 +12,9 @@ import spring.service.SyudyService;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/syudy")
@@ -67,4 +71,20 @@ public class SyudyController {
     }
 */
 
+    /*用户名检测*/
+    @RequestMapping("nameFindByName")
+    @ResponseBody
+    public Map<String,Object> nameFindByName(String syUsername){
+        Map<String,Object> map=new HashMap<String, Object>();
+        System.out.println(syUsername);
+        Integer name = syudyService.nameFindByName(syUsername);
+
+        if(name !=0){
+            map.put("name",name);
+            map.put("msg","error");
+        }else{
+            map.put("msg","suc");
+        }
+        return map;
+    }
 }
