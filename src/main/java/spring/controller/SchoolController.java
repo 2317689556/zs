@@ -3,6 +3,7 @@ package spring.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;
 import spring.service.SchoolService;
@@ -12,7 +13,7 @@ import java.util.List;
 
 @RequestMapping("/school")
 @Controller
-public class SchoolController {
+public class SchoolController<list> {
     @Resource
     private SchoolService schoolService;
 
@@ -43,5 +44,23 @@ public class SchoolController {
             return true;
         }
         return false;
+    }
+
+
+    /*省查询*/
+    @RequestMapping("shengAll")
+    @ResponseBody
+    public List<ZsRegion> shengAll(){
+        List<ZsRegion> list = schoolService.shengAll();
+        System.out.println(list);
+        return list;
+    }
+
+    /*市查询*/
+    @RequestMapping("shiAll")
+    @ResponseBody
+    public List<ZsRegion> shiAll(Integer pid) {
+        List<ZsRegion> list = schoolService.shiAll(pid);
+        return list;
     }
 }

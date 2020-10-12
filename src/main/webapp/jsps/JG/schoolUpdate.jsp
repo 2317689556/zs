@@ -23,7 +23,7 @@
 <c:import url="../utlis/background.jsp"/>
 <c:import url="../utlis/broadside.jsp"/>
 <div style="width: 1300px; height: 800px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black;">
-    <h3 style="margin-bottom: 40px">新增学习中心</h3>
+    <h3 style="margin-bottom: 40px">修改学习中心</h3>
 
     <div style="margin: 40px; margin-top: 20px; box-shadow: 0 0 4px black; height: 650px;width: 1200px;overflow: scroll; padding: 10px;">
         <form>
@@ -33,15 +33,21 @@
             </div>
             <div style="margin-left: 170px; width: 140px;height: 25px">
                 <div style="float: left;"><i style="color: red">*</i>&nbsp;省份&nbsp;&nbsp;&nbsp;
-                    <select id="province">
+                    <select>
                         <option>-请选择-</option>
+                        <option>河南省</option>
+                        <option>河北省</option>
+                        <option>广东省</option>
                     </select>
                 </div>
             </div>
             <div style="margin-left: 170px; margin-top:5px; width: 140px;height: 25px">
                 <div style="float: left;"><i style="color: red">*</i>&nbsp;城市&nbsp;&nbsp;&nbsp;
-                    <select id="city">
+                    <select>
                         <option>-请选择-</option>
+                        <option>汝南县</option>
+                        <option>平舆县</option>
+                        <option>新蔡县</option>
                     </select>
                 </div>
             </div>
@@ -521,7 +527,7 @@
             </div>
 
                 <div style="width: 50px;margin-left: 50px;float: left">
-                <input type="submit" class="btn btn-danger" value="提交">
+                <input type="submit" class="btn btn-danger" value="确定修改">
                 </div>
             </div>
 
@@ -535,40 +541,8 @@
 
 <script type="text/javascript">
 
-
-
-    /*查询省份*/
-    $(function(){
-        $.post("/school/shengAll",function (data) {
-            var str="";
-            $.each(data,function (i,n) {
-                str += "<option value='+"+n.id+"'>"+n.areaName+"<option>";
-            })
-            $("#province").html(str);
-        },"json")
-    })
-
-    /*查询城市*/
-
-        $("#province").change(function () {
-            var pid = $(this).val();
-            if(!pid){
-                return;
-            }
-
-            $.post("/school/shiAll",{"pid":pid},function (data) {
-                var str="";
-                $.each(data,function (i,n) {
-                    str += "<option>"+n.areaName+"<option>";
-                })
-                $("#city").html(str);
-            },"json")
-
-        })
-
+    /*证件上传*/
     $(function () {
-
-        /*证件上传*/
         //比较简洁，细节可自行完善
         $('#uploadSubmit').click(function () {
             var data = new FormData($('#uploadForm')[0]);

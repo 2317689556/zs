@@ -27,7 +27,18 @@
          insert into zs_syudy (id,sy_name,sy_username,sy_password,sy_state,sy_email,sy_phone)
         values
             (null,#{syName},#{syUsername},#{syPassword},0,#{syEmail},#{syPhone})
-
     </insert>
+
+    <!--省的查询-->
+    <!--List<ZsRegion> shengAll();-->
+    <select id="shengAll" resultType="ZsRegion">
+        select * from zs_region WHERE pid=1
+    </select>
+
+    <!--市的查询-->
+    <!--List<ZsRegion> shiAll(Integer pid);-->
+    <select id="shiAll" resultType="ZsRegion">
+        select areaName,id from zs_region WHERE pid=#{pid}
+    </select>
 
 </mapper>

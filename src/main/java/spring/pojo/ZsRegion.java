@@ -16,5 +16,7 @@ public class ZsRegion {
     private Date createtime;//创建时间
     private String areaName;//地区名称
     private long pid;//地区等级id
+    private String shi;//市
+    private String province;
 
 }
