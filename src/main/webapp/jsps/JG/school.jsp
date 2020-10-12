@@ -28,57 +28,69 @@
 <c:import url="../utlis/broadside.jsp"/>
 <div style="width: 1300px; height: 1000px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black;">
     <h3 style="">学习中心管理</h3>
-        <div style="float: left;margin-left: 20px;margin-top: 20px">
-            <label>省份</label>
-            <select style="width: 150px;height: 30px">
-                <option>-请选择-</option>
-                <option>选择一</option>
-                <option>选择二</option>
-            </select>
-        </div>
-        <div style="float: left;margin-left: 20px;margin-top: 20px">
-            <label>城市</label>
-            <select style="width: 150px;height: 30px">
-                <option>-请选择-</option>
-                <option>选择一</option>
-                <option>选择二</option>
-            </select>
-        </div>
-        <div style="float: left;margin-left: 20px;margin-top: 20px">
-            <label>区域管理中心</label>
-            <select style="width: 150px;height: 30px">
-                <option>-请选择-</option>
-                <option>选择一</option>
-                <option>选择二</option>
-            </select>
-        </div>
+    <div style="float: left;margin-left: 20px;margin-top: 20px">
+        <label>省份</label>
+        <select style="width: 150px;height: 30px">
+            <option>-请选择-</option>
+            <option>选择一</option>
+            <option>选择二</option>
+        </select>
+    </div>
+    <div style="float: left;margin-left: 20px;margin-top: 20px">
+        <label>城市</label>
+        <select style="width: 150px;height: 30px">
+            <option>-请选择-</option>
+            <option>选择一</option>
+            <option>选择二</option>
+        </select>
+    </div>
+    <div style="float: left;margin-left: 20px;margin-top: 20px">
+        <label>区域管理中心</label>
+        <select style="width: 150px;height: 30px">
+            <option>-请选择-</option>
+            <option>选择一</option>
+            <option>选择二</option>
+        </select>
+    </div>
 
-        <div style="float: left;margin-left: 20px;margin-top: 20px">
-            <label>状态</label>
-            <input type="" name=" ">
-        </div>
-        <div style="float: left;margin-left: 20px;margin-top: 20px">
-            <label>学习中心编号</label>
-            <input type="" name=" ">
-        </div>
+    <div style="float: left;margin-left: 20px;margin-top: 20px">
+        <label>状态</label>
+        <input type="" name=" ">
+    </div>
+    <div style="float: left;margin-left: 20px;margin-top: 20px">
+        <label>学习中心编号</label>
+        <input type="" name=" ">
+    </div>
 
 
-        <div style="float: left;margin-left: 20px;margin-top: 20px">
-            <button class="btn btn-primary">查询</button>
-        </div>
+    <div style="float: left;margin-left: 20px;margin-top: 20px">
+        <button class="btn btn-primary">查询</button>
+    </div>
 
 
     <div style="margin: 40px; margin-top: 120px; box-shadow: 0 0 4px black; height: 620px; padding: 10px;">
+        <div style="text-align: right">
+            <button class="btn btn-primary" style="background-color: #4CAF50;
+           border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: right;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;" onclick="addSchool()">+新增学习中心
+            </button>
+        </div>
         <table id="outBound_tab">
         </table>
     </div>
 </div>
 
 
-
 </body>
 
 <script>
+
+
     tab()
 
     function tab() {
@@ -121,18 +133,18 @@
                     field: 'slState',
                     title: '状态',
                     formatter: function (value, row, index) {
-                        if (value==1){
+                        if (value == 1) {
                             return "启用";
-                        }else {
+                        } else {
                             return "禁用";
                         }
                     }
                 }, {
                     title: '操作',
                     formatter: function (value, row, index) {
-                        return "<button class='btn btn-primary'><a href='' style='color: white'>编辑</a></button>"+
-                            "<button class='btn btn-primary'><a href='' style='color: white'>删除</a></button>"+
-                            "<button class='btn btn-primary'><a href='/jsps/JG/schoolUserManage.jsp' style='color: white'>用户管理</a></button>"+
+                        return "<button class='btn btn-primary'><a href='' style='color: white'>编辑</a></button>" +
+                            "<button class='btn btn-primary'><a onclick='delSchoolenter()' style='color: white'>删除</a></button>" +
+                            "<button class='btn btn-primary'><a href='/jsps/JG/schoolUserManage.jsp' style='color: white'>用户管理</a></button>" +
                             "<button class='btn btn-primary'><a href='' style='color: white'>报名点管理</a></button>"
                     }
                 }
@@ -140,6 +152,14 @@
         })
     }
 
+
+    function addSchool() {
+        location.href = "/jsps/JG/schoolAdd.jsp"
+    }
+    
+    function delSchoolenter() {
+
+    }
 
 </script>
 </html>
