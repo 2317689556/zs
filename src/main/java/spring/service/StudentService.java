@@ -15,13 +15,13 @@ public class StudentService {
     @Resource
     private StudentMapper studentMapper;
 
-    public PageInfo<ZsStudent> showIdentity(Params params) {
+    public PageInfo<ZsStudent> showIdentity(Params params, String slSchoolName, String stIdcard, String stName) {
         int page = (params.getOffset()/params.getLimit())+1;
         int size = params.getLimit();
 
         //开始分页
         PageHelper.startPage(page,size);
-        List<ZsStudent> list = studentMapper.showIdentity(params);
+        List<ZsStudent> list = studentMapper.showIdentity(params,slSchoolName,stIdcard,stName);
 
         PageInfo<ZsStudent> p = new PageInfo<>(list);
         return p;

@@ -28,8 +28,8 @@ public class StudentController {
     //身份信息查询
     @RequestMapping("/showIdentity")
     @ResponseBody
-    public PageInfo<ZsStudent> showIdentity(Params params) {
-        PageInfo<ZsStudent> pageInfo = studentService.showIdentity(params);
+    public PageInfo<ZsStudent> showIdentity(Params params,String slSchoolName,String stName,String stIdcard) {
+        PageInfo<ZsStudent> pageInfo = studentService.showIdentity(params,slSchoolName,stIdcard,stName);
         return pageInfo;
     }
 

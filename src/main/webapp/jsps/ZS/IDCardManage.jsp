@@ -28,26 +28,22 @@
 
 <div style="width: 1300px; height: 1000px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black;">
     <h3 style="">身份证信息读取管理</h3>
-    <div style="float: left;margin-left: 20px;margin-top: 20px">
+    <div style="float: left;margin-left: 50px;margin-top: 20px">
         <label>学习中心</label>
-        <select style="width: 150px;height: 30px">
-            <option>-请选择-</option>
-            <option>选择一</option>
-            <option>选择二</option>
-        </select>
+        <input type="text" name="slSchoolName" id="slSchoolName">
     </div>
 
     <div style="float: left;margin-left: 20px;margin-top: 20px">
         <label>姓名</label>
-        <input type="" name=" ">
+        <input type="text" name="stName" id="name">
     </div>
     <div style="float: left;margin-left: 20px;margin-top: 20px">
         <label>证件号</label>
-        <input type="" name=" ">
+        <input type="text" name="stIdcard">
     </div>
 
     <div style="float: left;margin-left: 20px;margin-top: 20px">
-        <button class="btn btn-primary">查询</button>
+        <button class="btn btn-primary" onclick="mohuFind()">查询</button>
     </div>
 
 
@@ -83,6 +79,9 @@
 
 </body>
 <script>
+    function mohuFind() {
+        $("#identity_id").bootstrapTable("refresh");
+    }
     $(function () {
         $("#identity_id").bootstrapTable({
             url: "/student/showIdentity",
@@ -101,7 +100,10 @@
                 return{
                     limit:param.limit,
                     offset:param.offset,
-                    //id:$("#table_id").val(),
+                    slSchoolName:$("input[name=slSchoolName]").val(),
+                    stName:$("input[name=stName]").val(),
+                    stIdcard:$("input[name=stIdcard]").val()
+
                 }
             },
             responseHandler:function (res) {//处理服务器返回数据
@@ -209,7 +211,7 @@
         }
     }
     
-    
+
 </script>
 
 </html>

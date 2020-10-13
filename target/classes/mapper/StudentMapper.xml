@@ -8,7 +8,20 @@
     <!--   //身份信息查询
     List<ZsStudent> showIdentity(Params params);-->
     <select id="showIdentity" resultType="ZsStudent">
-        SELECT stu.*,sc.sl_school_name FROM zs_student stu , zs_school sc WHERE stu.school_id=sc.id
+        SELECT stu.*,sc.sl_school_name FROM zs_student stu , zs_school sc
+        <where>
+            <if test="slSchoolName!=null and slSchoolName!=''">
+                and sc.sl_school_name like '%${slSchoolName}%'
+            </if>
+            <if test="stIdcard!=null and stIdcard!=''">
+                and stu.st_idcard like '%${stIdcard}%'
+            </if>
+            <if test="stName!=null and stName!=''">
+                and stu.st_name like '%${stName}%'
+            </if>
+            and stu.school_id=sc.id
+        </where> 
+
     </select>
 
     <!--   //导出数据
