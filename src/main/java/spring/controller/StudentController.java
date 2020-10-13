@@ -31,6 +31,8 @@ public class StudentController {
         return pageInfo;
     }
 
+
+
     @ResponseBody
     @RequestMapping("/outIdentity")
     public List<ZsStudent> outIdentity(HttpSession session) {
