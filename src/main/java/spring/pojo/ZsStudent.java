@@ -30,5 +30,7 @@ public class ZsStudent {
     private String stEmpty4;
     private String stEmpty5;
 
+    private String slSchoolName;
+
 
 }
