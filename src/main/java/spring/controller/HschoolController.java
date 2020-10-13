@@ -2,12 +2,10 @@ package spring.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import spring.pojo.ZsHschool;
 import spring.service.HschoolService;
-import javax.annotation.Resource;
 import java.util.List;
 
 //用户
@@ -20,8 +18,10 @@ public class HschoolController {
    //*高校__全查*//*
     @RequestMapping("HschoolFandAll")
     @ResponseBody
-    public List<ZsHschool> hschoolFandAll(Model m) {
-        List<ZsHschool> hschool = hschoolService.hschoolFandAll();
+    public List<ZsHschool> hschoolFandAll(String hlNumber,String hlName) {
+        System.out.println(hlName);
+        System.out.println(hlNumber);
+        List<ZsHschool> hschool = hschoolService.hschoolFandAll(hlNumber,hlName);
         System.out.println(hschool);
         return hschool;
     }
@@ -59,5 +59,7 @@ public class HschoolController {
         int i = hschoolService.addHschool(hschool);
         return i > 0;
     }
-    /*提交注释*/
+
 }
+
+

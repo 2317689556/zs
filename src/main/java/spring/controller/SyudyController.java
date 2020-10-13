@@ -93,7 +93,4 @@ public class SyudyController {
         System.out.println(list);
         return list;
     }
-
-
-
 }

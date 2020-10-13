@@ -8,8 +8,18 @@
     <!--高校_全查-->
     <!--List<ZsHschool> hschoolFandAll();-->
     <select id="hschoolFandAll" resultType="ZsHschool">
-        SELECT * FROM zs_hschool
+        SELECT *
+        FROM zs_hschool
+        <where>
+            <if test="hlNumber != null and hlNumber != ''  ">
+                hl_number like '%${hlNumber}%'
+            </if>
+            <if test="hlName != null and hlName != ''">
+                AND hl_name like '%${hlName}%'
+            </if>
+        </where>
     </select>
+
 
    <!-- /*删除高校*/-->
    <!--  int deleteHschool();-->
@@ -41,5 +51,6 @@
         insert into zs_hschool  (hl_number,hl_name)
         value(#{hlNumber},#{hlName});
     </insert>
+
 
 </mapper>

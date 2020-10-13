@@ -16,8 +16,8 @@ public class HschoolService {
     HschoolMapper hschoolMapper;
 
     /*高校全查*/
-    public List<ZsHschool> hschoolFandAll() {
-        return hschoolMapper.hschoolFandAll();
+    public List<ZsHschool> hschoolFandAll(String hlNumber, String hlName) {
+        return hschoolMapper.hschoolFandAll(hlNumber,hlName);
     }
 
     /*删除高校*/
@@ -36,7 +36,9 @@ public class HschoolService {
         return hschoolMapper.updatehschool(hschool);
     }
 
+    /*高效管理__添加*/
     public int addHschool(ZsHschool hschool) {
         return hschoolMapper.addHschool(hschool);
     }
+
 }
