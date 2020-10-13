@@ -2,10 +2,7 @@ package spring.service;
 
 import org.springframework.stereotype.Service;
 import spring.dao.SyudyMapper;
-import spring.pojo.ZsRegion;
-import spring.pojo.ZsSchool;
-import spring.pojo.ZsSyudy;
-import spring.pojo.ZsregionVo;
+import spring.pojo.*;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -18,6 +15,11 @@ public class SyudyService {
 
     public Integer nameFindByName(String syUsername) {
         return syudyMapper.nameFindByName(syUsername);
+    }
+
+    /*区域管理查询*/
+    public List<ZsAddress> quyuAll() {
+        return syudyMapper.quyuAll();
     }
 
 

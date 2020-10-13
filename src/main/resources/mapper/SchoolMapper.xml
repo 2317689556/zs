@@ -66,4 +66,18 @@
          id=#{id}
     </update>
 
+    <!--省的查询-->
+    <!--List<ZsRegion> shengAll();-->
+    <select id="shengAll" resultType="ZsRegion">
+        select * from zs_region WHERE pid=1
+    </select>
+
+    <!--市的查询-->
+    <!--List<ZsRegion> shiAll(Integer pid);-->
+    <select id="shiAll" resultType="ZsRegion">
+        select areaName,id from zs_region WHERE pid=#{pid}
+    </select>
+
+
+
 </mapper>

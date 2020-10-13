@@ -1,8 +1,10 @@
 package spring.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;
 import spring.service.SchoolService;
@@ -84,7 +86,24 @@ public class SchoolController {
         int i = schoolService.changePassword(zsSyudy);
 
         return "redirect:/jsps/JG/schoolUserManage.jsp";
-
     }
+
+
+    /*省的查询*/
+    @RequestMapping("/shengAll")
+    @ResponseBody
+    public List<ZsRegion> shengAll() {
+        List<ZsRegion> list = schoolService.shengAll();
+        return list;
+    }
+
+    /*市的查询*/
+    @RequestMapping("/shiAll")
+    @ResponseBody
+    public List<ZsRegion> shiAll(Integer pid) {
+        List<ZsRegion> list = schoolService.shiAll(pid);
+        return list;
+    }
+
 
 }

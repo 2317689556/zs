@@ -1,5 +1,6 @@
 package spring.dao;
 
+import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;
 
@@ -29,4 +30,10 @@ public interface SchoolMapper {
 
     //删除学习中心
     int delSchoolCenter(Integer id);
+
+    /*省的查询*/
+    List<ZsRegion> shengAll();
+
+    /*市的查询*/
+    List<ZsRegion> shiAll(Integer pid);
 }

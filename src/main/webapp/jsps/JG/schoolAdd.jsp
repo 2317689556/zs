@@ -26,7 +26,7 @@
     <h3 style="margin-bottom: 40px">新增学习中心</h3>
 
     <div style="margin: 40px; margin-top: 20px; box-shadow: 0 0 4px black; height: 650px;width: 1200px;overflow: scroll; padding: 10px;">
-        <form>
+        <form method="get" action="/school/">
             <div style="height: 10px;width: 220px"><span class="glyphicon glyphicon-pushpin"></span><strong style="font-size: 18px;font-style: oblique">学习中心基本信息</strong></div>
             <div style="width: 1000px">
                 <hr style="color: red">
@@ -49,7 +49,7 @@
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px"><i style="color: red">*</i>&nbsp;学习中心全称</div>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="firstname" style="width: 150px;height: 27px">
+                        <input type="text" class="form-control" id="firstname" name="slSchoolName" style="width: 150px;height: 27px">
                     </div>
                 </div>
             </div>
@@ -59,14 +59,14 @@
                         <i style="color: red">*</i>&nbsp;学习中心编号
                     </div>
                     <div class="col-sm-10" style="float: left;width: 70px">
-                        <input type="text" class="form-control" id="" style="width: 50px;height: 27px">
+                        <input type="text" class="form-control" id="1" name="slNumber" style="width: 50px;height: 27px">
                     </div>
                     <div style="float: left;width: 250px;margin-top: 5px">
                          <i style="color: red;font-size: 10px">(编号为四位，不足四位的请补0，如0101)</i>
                     </div>
             </div>
 
-            <div class="form-group" style="margin-left: 80px; margin-top:1px; width: 1000px;height: 35px">
+           <%-- <div class="form-group" style="margin-left: 80px; margin-top:1px; width: 1000px;height: 35px">
                 <div style="float: left;width: 130px;margin-top: 3px" >
                     <i style="color: red">*</i>&nbsp;校外学习中心代码
                 </div>
@@ -76,16 +76,42 @@
                 <div style="float: left;width: 100px;margin-top: 5px">
                     <i style="color: red;font-size: 10px">代码为八位数</i>
                 </div>
-            </div>
+            </div>--%>
 
             <div style="margin-left: 80px; margin-top:5px; width: 700px;height: 35px">
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px;width: 130px"><i style="color: red">*</i>&nbsp;校外学习中心全称</div>
                     <div class="col-sm-10" style="float: left;width: 160px">
-                        <input type="text" class="form-control" id="3" style="width: 150px;height: 27px">
+                        <input type="text" class="form-control" id="3" name="slOuterName" style="width: 150px;height: 27px">
                     </div>
                 </div>
             </div>
+
+            <div style="margin-left: 80px; margin-top:5px; width: 700px;height: 35px">
+                <div class="form-group">
+                    <div style="float: left;margin-top: 3px;width: 130px"><i style="color: red">*</i>&nbsp;区域管理中心</div>
+                    <div class="col-sm-10" style="float: left;width: 160px">
+                        <select id="quyu" name="slDistrictId">
+                            <option>-请选择-</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-left:120px;margin-top:5px; width: 540px;height: 35px">
+                <div style="float: left">
+                    状态
+                </div>
+                <div style="float: left; width: 30%;" class="mui-radio">
+                    <label>启用</label>
+                    <input id="Gender_male" name="slState" value="1" class="gender" type="radio" checked="true"/>
+                </div>
+                <div style="float: left; width: 30%" class="mui-radio">
+                    <label>停用</label>
+                    <input id="Gender_female" name="slState" value="0" class="gender" type="radio">
+                </div>
+            </div>
+
 
             <br><br>
             <div style="height: 10px;width: 220px"><span class="glyphicon glyphicon-pushpin"></span><strong style="font-size: 18px;font-style: oblique">学习中心联系信息</strong></div>
@@ -97,7 +123,7 @@
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px"><i style="color: red">*</i>&nbsp;联系地址</div>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="5" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="5" name="syAddress" style="width: 200px;height: 27px">
                     </div>
                 </div>
             </div>
@@ -106,7 +132,7 @@
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px"><i style="color: red">*</i>&nbsp;负责人姓名</div>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="6" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="6" name="syName" style="width: 200px;height: 27px">
                     </div>
                 </div>
             </div>
@@ -115,7 +141,7 @@
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px"><i style="color: red">*</i>&nbsp;负责人电话</div>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="7" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="7" name="syPhone" style="width: 200px;height: 27px">
                     </div>
                 </div>
             </div>
@@ -124,12 +150,12 @@
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px"><i style="color: red">*</i>&nbsp;负责人邮箱</div>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="8" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="8" name="syEmail" style="width: 200px;height: 27px">
                     </div>
                 </div>
             </div>
 
-            <div style="margin-left: 134px; margin-top:5px; width: 700px;height: 35px">
+            <%--<div style="margin-left: 134px; margin-top:5px; width: 700px;height: 35px">
             <div class="form-group">
                 <div style="float: left;margin-top: 3px">联系人姓名</div>
                 <div class="col-sm-10">
@@ -154,7 +180,7 @@
                         <input type="text" class="form-control" id="11" style="width: 200px;height: 27px">
                     </div>
                 </div>
-            </div>
+            </div>--%>
 
 
             <br><br>
@@ -167,18 +193,18 @@
                 <div class="form-group">
                     <div style="float: left;margin-top: 3px"><i style="color: red">*</i>&nbsp;依托单位名称</div>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="12" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="12" name="ssName" style="width: 200px;height: 27px">
                     </div>
                 </div>
             </div>
 
             <div style="margin-left: 90px; margin-top:5px; width: 700px;height: 35px">
                 <div class="form-group">
-                    <div style="float: left;margin-top: 3px;width: 100px"><i style="color: red">*</i>&nbsp;依托单位性质</div>
+                    <div style="float: left;margin-top: 3px;width: 100px"><i style="color: red">*</i>&nbsp;依托单位信息</div>
 
                     <div class="col-lg-6" style="float: left;width: 300px">
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" style="height: 27px;width: 200px;">
+                            <input type="text" class="form-control" name="ssNature" style="height: 27px;width: 200px;">
                         </div><!-- /input-group -->
                     </div><!-- /.col-lg-6 -->
                 </div>
@@ -188,13 +214,13 @@
                 <div class="form-group" style="width: 600px;">
                     <div style="float: left;margin-top: 3px;width: 130px"><i style="color: red">*</i>&nbsp;依托单位法人代码</div>
                     <div class="col-sm-10" style="float: left;width: 150px">
-                        <input type="text" class="form-control" id="14" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="14" name="ssCode" style="width: 200px;height: 27px">
                     </div>
                 </div>
             </div>
 
             <br><br>
-            <div style="height: 10px;width: 120px">审批信息</div>
+            <div style="height: 10px;width: 220px"><span class="glyphicon glyphicon-pushpin"></span><strong style="font-size: 18px;font-style: oblique">审批信息</strong></div>
             <div style="width: 1000px">
                 <hr style="color: red">
             </div>
@@ -203,7 +229,7 @@
                 <div class="form-group" style="width: 600px;">
                     <div style="float: left;margin-top: 3px;width: 100px"><i style="color: red">*</i>&nbsp;审批通过时间</div>
                     <div class="col-sm-10" style="float: left;width: 200px">
-                        <input type="text" class="form-control" id="15" style="width: 200px;height: 27px">
+                        <input type="date" class="form-control" id="15" name="slStartTime" style="width: 200px;height: 27px">
                     </div>
                 </div>
             </div>
@@ -212,7 +238,7 @@
                 <div class="form-group" style="width: 600px;">
                     <div style="float: left;margin-top: 3px;width: 80px"><i style="color: red">*</i>&nbsp;批文号</div>
                     <div class="col-sm-10" style="float: left;width: 200px">
-                        <input type="text" class="form-control" id="16" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="16" name="slApproval" style="width: 200px;height: 27px">
                     </div>
                 </div>
             </div>
@@ -223,14 +249,14 @@
                 <hr style="color: red">
             </div>
 
-            <div style="margin-left: 125px; margin-top:5px; width: 700px;height: 35px">
+            <%--<div style="margin-left: 125px; margin-top:5px; width: 700px;height: 35px">
                 <div class="form-group" style="width: 600px;">
                     <div style="float: left;margin-top: 3px;width: 80px"><i style="color: red">*</i>&nbsp;姓名</div>
                     <div class="col-sm-10" style="float: left;width: 200px">
                         <input type="text" class="form-control" id="17" style="width: 200px;height: 27px">
                     </div>
                 </div>
-            </div>
+            </div>--%>
 
             <div style="margin-left: 125px; margin-top:5px; width: 700px;height: 35px">
                 <div class="form-group" style="width: 600px;">
@@ -248,7 +274,7 @@
                 <div class="form-group" style="width: 600px;">
                     <div style="float: left;margin-top: 3px;width: 80px"><i style="color: red">*</i>&nbsp;密码</div>
                     <div class="col-sm-10" style="float: left;width: 200px">
-                        <input type="text" class="form-control" id="19" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="19" name="syPassword" style="width: 200px;height: 27px">
                     </div>
                 </div>
             </div>
@@ -257,11 +283,22 @@
                 <div class="form-group" style="width: 600px;">
                     <div style="float: left;margin-top: 3px;width: 80px"><i style="color: red">*</i>&nbsp;确认密码</div>
                     <div class="col-sm-10" style="float: left;width: 200px">
-                        <input type="text" class="form-control" id="20" style="width: 200px;height: 27px">
+                        <input type="text" class="form-control" id="20" onblur="bur()" style="width: 200px;height: 27px">
                     </div>
                 </div>
             </div>
 
+            <br><hr><br><br>
+            <div style="width: 1200px;">
+                <div style="width: 50px;float: left;margin-left: 450px">
+                    <button class="btn btn-success">返回</button>
+                </div>
+
+                <div style="width: 50px;margin-left: 100px;float: left">
+                    <input type="submit" class="btn btn-danger" value="提交">
+                </div>
+            </div>
+        </form>
             <%--<br><br>
             <div style="height: 10px;width: 220px"><span class="glyphicon glyphicon-pushpin"></span><strong style="font-size: 18px;font-style: oblique">报名点基本信息</strong></div>
             <div style="width: 1000px">
@@ -382,8 +419,8 @@
                 </div>
             </div>--%>
 
-            <br><br><br>
-            <div style="height: 10px;width: 320px;margin-left: 400px"><span class="glyphicon glyphicon-folder-open"></span><strong style="font-size: 18px;font-style: oblique">&nbsp;北京学习中心三证合一证明材料</strong></div>
+            <br><br>
+            <div style="height: 10px;width: 320px;margin-left: 400px;margin-top: 150px"><span class="glyphicon glyphicon-folder-open"></span><strong style="font-size: 18px;font-style: oblique">&nbsp;北京学习中心三证合一证明材料</strong></div>
             <div style="width: 1000px">
                 <hr style="color: red">
             </div>
@@ -478,18 +515,9 @@
                 </div>
             </div>
 
-            <br><hr><br><br>
-            <div style="width: 1200px;">
-            <div style="width: 50px;float: left;margin-left: 950px">
-                <button class="btn btn-success">返回</button>
-            </div>
 
-                <div style="width: 50px;margin-left: 50px;float: left">
-                <input type="submit" class="btn btn-danger" value="提交">
-                </div>
-            </div>
 
-        </form>
+
     </div>
 
 </div>
@@ -498,7 +526,21 @@
 </body>
 
 <script type="text/javascript">
+    
+    
+    
+    function bur() {
+       //alert("输入框失去了焦点");
+        var a = $("#19").val();
+        var b = $("#20").val();
+        if(a!=b){
+            alert("两次输入的密码不一致！")
+        }
 
+    }
+    
+    
+    
     /*用户名检测*/
     function XuXi(){
         /*var syUsername=document.getElementsByName('syUsername');*/
@@ -517,13 +559,26 @@
     }
 
 
+    /*区域管理中心*/
+    $(function () {
+        $.post("/syudy/quyuAll",function (data) {
+            var str="";
+            $.each(data,function (i,n) {
+                str += "<option value='"+n.id+"'name='slDistrictId'>"+n.asName+"<option>";
+            })
+            $("#quyu").html(str);
+        },"json")
+
+    })
+
+
 
     /*查询省份*/
     $(function(){
         $.post("/school/shengAll",function (data) {
             var str="";
             $.each(data,function (i,n) {
-                str += "<option value='+"+n.id+"'>"+n.areaName+"<option>";
+                str += "<option value='"+n.id+"'name='slAreaId'>"+n.areaName+"<option>";
             })
             $("#province").html(str);
         },"json")
