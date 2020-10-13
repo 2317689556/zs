@@ -158,7 +158,7 @@
                 }, {
                     title: '操作',
                     formatter: function (value, row, index) {
-                        return "<button class='btn btn-primary'><a href='' style='color: white'>删除</a></button>"
+                        return "<button class='btn btn-primary'><a onclick='delIdentity("+row.id+")' style='color: white'>删除</a></button>"
                     }
                 }
             ]
@@ -182,6 +182,32 @@
                 alert("Error")
             }
         })
+    }
+    
+    function delIdentity(id) {
+        var msg = "确定删除吗？";
+        if (confirm(msg)==true){
+            $.ajax({
+                url:'/student/delIdentityMessage',
+                type:'post',
+                data:{"id":id},
+                dataType:'json',
+                success:function (data) {
+                    if (data){
+                        alert("删除成功")
+                        window.location.reload();
+                    }else {
+                        alert("出错了")
+                    }
+                },
+                error:function (data) {
+                    alert("Error")
+                }
+            })
+        }else{
+            return false;
+        }
+
     }
     
     

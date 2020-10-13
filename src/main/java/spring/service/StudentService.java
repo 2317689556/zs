@@ -32,4 +32,8 @@ public class StudentService {
     public List<ZsStudent> outIdentity() {
         return studentMapper.outIdentity();
     }
+
+    public int delIdentityMessage(Integer id) {
+        return studentMapper.delIdentityMessage(id);
+    }
 }

@@ -21,9 +21,11 @@ import java.util.List;
 @Controller
 @RequestMapping("/student")
 public class StudentController {
+
     @Resource
     private StudentService studentService;
 
+    //身份信息查询
     @RequestMapping("/showIdentity")
     @ResponseBody
     public PageInfo<ZsStudent> showIdentity(Params params) {
@@ -33,6 +35,7 @@ public class StudentController {
 
 
 
+    //导出Excel
     @ResponseBody
     @RequestMapping("/outIdentity")
     public List<ZsStudent> outIdentity(HttpSession session) {
@@ -59,6 +62,7 @@ public class StudentController {
     private List<String> strList() {
         List<String> strings = new ArrayList<>();
         strings.add("id");
+        strings.add("slSchoolName");
         strings.add("stName");
         strings.add("stIdcard");
         strings.add("stBirthday");
@@ -68,8 +72,15 @@ public class StudentController {
         strings.add("stEndTime");
         strings.add("stAddress");
         strings.add("stPhone");
+
         return strings;
-
-
    }
+
+    //删除身份信息
+    @RequestMapping("/delIdentityMessage")
+    @ResponseBody
+    public int delIdentityMessage(Integer id){
+        int i = studentService.delIdentityMessage(id);
+        return i;
+    }
 }

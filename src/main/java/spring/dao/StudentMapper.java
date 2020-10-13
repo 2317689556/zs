@@ -11,4 +11,7 @@ public interface StudentMapper {
 
     //导出数据
     List<ZsStudent> outIdentity();
+
+    //删除身份信息
+    int delIdentityMessage(Integer id);
 }
