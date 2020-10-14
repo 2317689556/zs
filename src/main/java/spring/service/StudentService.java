@@ -42,7 +42,7 @@ public class StudentService {
         return studentMapper.showIdentityStatistic();
     }
 
-    public ZsSchool showSchoolClass() {
+    public List<ZsSchool> showSchoolClass() {
         return studentMapper.showSchoolClass();
     }
 }

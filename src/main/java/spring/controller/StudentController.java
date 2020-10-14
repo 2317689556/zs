@@ -96,8 +96,8 @@ public class StudentController {
 
     @RequestMapping("/showSchoolClass")
     @ResponseBody
-    public ZsSchool showSchoolClass(){
-        ZsSchool list = studentService.showSchoolClass();
+    public List<ZsSchool> showSchoolClass(){
+        List<ZsSchool> list = studentService.showSchoolClass();
         return list;
     }
 

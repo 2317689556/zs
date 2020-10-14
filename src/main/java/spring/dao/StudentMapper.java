@@ -21,5 +21,5 @@ public interface StudentMapper {
     //身份信息统计
     List<ZsStudent> showIdentityStatistic();
 
-    ZsSchool showSchoolClass();
+    List<ZsSchool> showSchoolClass();
 }
