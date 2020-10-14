@@ -44,9 +44,6 @@
                                       <a class="menu3" href="/jsps/ZS/recruitMajor.jsp">招生专业管理</a>
                                   </li>
                                   <li>
-                                      <a class="menu3">招生时间管理</a>
-                                  </li>
-                                  <li>
                                       <a class="menu3">课程进修生授权</a>
                                   </li>
                               </ul>
