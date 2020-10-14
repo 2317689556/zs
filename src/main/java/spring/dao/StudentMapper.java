@@ -2,6 +2,7 @@ package spring.dao;
 
 import org.apache.ibatis.annotations.Param;
 import spring.pojo.Params;
+import spring.pojo.ZsSchool;
 import spring.pojo.ZsStudent;
 
 import java.util.List;
@@ -16,4 +17,9 @@ public interface StudentMapper {
 
     //删除身份信息
     int delIdentityMessage(Integer id);
+
+    //身份信息统计
+    List<ZsStudent> showIdentityStatistic();
+
+    ZsSchool showSchoolClass();
 }

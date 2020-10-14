@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import spring.pojo.Params;
+import spring.pojo.ZsSchool;
 import spring.pojo.ZsStudent;
 import spring.pojo.ZsUser;
 import spring.service.StudentService;
@@ -83,4 +84,21 @@ public class StudentController {
         int i = studentService.delIdentityMessage(id);
         return i;
     }
+
+
+    //身份信息统计
+    @ResponseBody
+    @RequestMapping("/showIdentityStatistic")
+    public List<ZsStudent> showIdentityStatistic(){
+        List<ZsStudent> list = studentService.showIdentityStatistic();
+        return list;
+    }
+
+    @RequestMapping("/showSchoolClass")
+    @ResponseBody
+    public ZsSchool showSchoolClass(){
+        ZsSchool list = studentService.showSchoolClass();
+        return list;
+    }
+
 }

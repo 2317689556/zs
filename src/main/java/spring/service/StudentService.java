@@ -5,6 +5,7 @@ import com.github.pagehelper.PageInfo;
 import org.springframework.stereotype.Service;
 import spring.dao.StudentMapper;
 import spring.pojo.Params;
+import spring.pojo.ZsSchool;
 import spring.pojo.ZsStudent;
 
 import javax.annotation.Resource;
@@ -35,5 +36,13 @@ public class StudentService {
 
     public int delIdentityMessage(Integer id) {
         return studentMapper.delIdentityMessage(id);
+    }
+
+    public List<ZsStudent> showIdentityStatistic() {
+        return studentMapper.showIdentityStatistic();
+    }
+
+    public ZsSchool showSchoolClass() {
+        return studentMapper.showSchoolClass();
     }
 }

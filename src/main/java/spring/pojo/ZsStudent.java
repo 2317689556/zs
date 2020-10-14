@@ -32,6 +32,8 @@ public class ZsStudent {
 
     private String slSchoolName;
 
+    private int mcount;
+
     public Integer getId() {
         return id;
     }

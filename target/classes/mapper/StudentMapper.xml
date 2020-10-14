@@ -27,7 +27,8 @@
     <!--   //导出数据
     List<ZsStudent> outIdentity();-->
     <select id="outIdentity" resultType="ZsStudent">
-        SELECT stu.*,sc.sl_school_name slSchoolName FROM zs_student stu , zs_school sc WHERE stu.school_id=sc.id
+        SELECT stu.*,sc.sl_school_name slSchoolName FROM
+        zs_student stu , zs_school sc WHERE stu.school_id=sc.id
      </select>
 
 
@@ -36,6 +37,18 @@
     <delete id="delIdentityMessage">
         delete from  zs_student where id=#{id}
     </delete>
+
+    <!--//身份信息统计
+    List<ZsStudent> showIdentityStatistic();-->
+    <select id="showIdentityStatistic" resultType="ZsStudent">
+        SELECT DISTINCT sc.sl_school_name,(SELECT COUNT(st_name) FROM zs_student) mcount
+        FROM zs_student stu,zs_school sc WHERE stu.school_id=sc.id
+    </select>
+
+    <!--showSchoolClass-->
+    <select id="showSchoolClass" resultType="ZsSchool">
+        select sl_school_name from zs_school
+    </select>
 
 
 
