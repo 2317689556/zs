@@ -59,10 +59,10 @@
                               <a>招生信息</a>
                               <ul>
                                   <li>
-                                      <a href="/jsps/ZS/IDCardManage.jsp">身份证读取信息管理</a>
+                                      <a class="menu3" href="/jsps/ZS/IDCardManage.jsp">身份证读取信息管理</a>
                                   </li>
                                   <li>
-                                      <a class="menu3">身份证读取信息统计</a>
+                                      <a class="menu3" href="">身份证读取信息统计</a>
                                   </li>
                                   <li>
                                       <a class="menu3">报名信息录入</a>
