@@ -45,8 +45,6 @@
         FROM zs_student stu,zs_school sc WHERE stu.school_id=sc.id
     </select>
 
-
-
     <!--showSchoolClass-->
     <!--<select id="showSchoolClass" resultType="ZsSchool">
         select sl_school_name from zs_school
