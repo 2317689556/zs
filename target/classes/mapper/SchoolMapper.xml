@@ -78,7 +78,38 @@
         select areaName,id from zs_region WHERE pid=#{pid}
     </select>
 
-  <!--  /*课程进修生授权*/
+    <!--学习中心的添加1-->
+    <!--int schoolAdd(ZsSchool zsSchool);-->
+    <insert id="schoolAdd">
+        INSERT INTO zs_school (id,sl_number,sl_school_name,sl_outer_name,sl_area_id,sl_district_id,sl_state,sl_start_time,sl_approval)
+        VALUE
+        <foreach collection="list1" item="list1" separator=",">
+            (null,#{list1.slNumber},#{list1.slSchoolName},#{list1.slOuterName},#{list1.slAreaId},#{list1.slDistrictId},#{list1.slState},#{list1.slStartTime},#{list1.slApproval})
+
+        </foreach>
+    </insert>
+
+    <!--学习中心用户的添加-->
+    <!--void syudyAdd(List<ZsSyudy> list2);-->
+    <insert id="syudyAdd">
+        INSERT INTO zs_syudy (id,sy_name,sy_username,sy_password,sy_email,sy_phone,sy_address)
+        VALUE
+        <foreach collection="list2" item="list2" separator=",">
+            (null,#{list2.syName},#{list2.syUsername},#{list2.syPassword},#{list2.syEmail},#{list2.syPhone},#{list2.syAddress})
+        </foreach>
+    </insert>
+
+    <!--依托单位表的添加-->
+    <!--void supportsAdd(List<ZsSupports> list3);-->
+    <insert id="supportsAdd">
+        INSERT INTO zs_supports (id,ss_name,ss_nature,ss_code)
+        VALUE
+        <foreach collection="list3" item="list3" separator=",">
+            (null,#{list3.ssName},#{list3.ssNature},#{list3.ssCode})
+        </foreach>
+    </insert>
+
+      <!--/*课程进修生授权*/
     全查
     List<ZsEnroll> engageFandAll();-->
     <select id="engageFandAll" resultType="ZsSchool">
@@ -91,7 +122,7 @@
         sc.id=en.el_zs_school_id
     </select>
 
-   <!-- /*课程进修是否授权*/
+    <!--/*课程进修是否授权*/
     int updatewschool(Integer id);-->
     <update id="updatewschool">
          UPDATE zs_school SET sl_state=

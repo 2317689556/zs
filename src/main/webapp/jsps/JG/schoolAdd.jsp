@@ -26,14 +26,14 @@
     <h3 style="margin-bottom: 40px">新增学习中心</h3>
 
     <div style="margin: 40px; margin-top: 20px; box-shadow: 0 0 4px black; height: 650px;width: 1200px;overflow: scroll; padding: 10px;">
-        <form method="get" action="/school/">
+        <form method="post" action="/school/schoolAdd">
             <div style="height: 10px;width: 220px"><span class="glyphicon glyphicon-pushpin"></span><strong style="font-size: 18px;font-style: oblique">学习中心基本信息</strong></div>
             <div style="width: 1000px">
                 <hr style="color: red">
             </div>
             <div style="margin-left: 170px; width: 140px;height: 25px">
                 <div style="float: left;"><i style="color: red">*</i>&nbsp;省份&nbsp;&nbsp;&nbsp;
-                    <select id="province">
+                    <select id="province" name="slAreaId">
                         <option>-请选择-</option>
                     </select>
                 </div>

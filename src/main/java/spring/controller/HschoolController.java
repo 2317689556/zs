@@ -6,13 +6,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import spring.pojo.ZsHschool;
 import spring.service.HschoolService;
+
+import javax.annotation.Resource;
 import java.util.List;
 
 //用户
 @Controller
 @RequestMapping("/hschool")
 public class HschoolController {
-    @Autowired
+    @Resource
     private  HschoolService hschoolService;
 
    //*高校__全查*//*
@@ -56,8 +58,13 @@ public class HschoolController {
     @RequestMapping("addHschool")
     @ResponseBody
     public boolean addHschool(ZsHschool hschool) {
+        //boolean falg=false;
         int i = hschoolService.addHschool(hschool);
-        return i > 0;
+        /*if(i > 0){
+            falg=true;
+        }*/
+       // return falg;
+        return i>0;
     }
 
 }

@@ -2,6 +2,7 @@ package spring.pojo;
 
 
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -18,6 +19,7 @@ public class ZsSchool {
     private Integer slAreaId;//地区
     private Integer slDistrictId;//区域管理中心
     private Integer slState;//状态，1启用，0禁用
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date slStartTime;//审批通过时间
     private String slApproval;//批文号
     private String slCard1;//信用代码证照片

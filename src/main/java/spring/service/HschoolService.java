@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 public class HschoolService {
     @Resource
-    HschoolMapper hschoolMapper;
+    private HschoolMapper hschoolMapper;
 
     /*高校全查*/
     public List<ZsHschool> hschoolFandAll(String hlNumber, String hlName) {

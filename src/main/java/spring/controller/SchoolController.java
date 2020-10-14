@@ -1,14 +1,18 @@
 package spring.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
+import spring.pojo.ZsSupports;
 import spring.pojo.ZsSyudy;
 import spring.service.SchoolService;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping("/school")
@@ -104,6 +108,49 @@ public class SchoolController {
         return list;
     }
 
+    //添加学习中心
+    @RequestMapping("/schoolAdd")
+    public String schoolAdd(ZsSchool zsSchool, ZsSyudy zsSyudy, ZsSupports zsSupports){
+
+        System.out.println(zsSchool);
+
+        /*学习中心表的添加*/
+        List<ZsSchool> list1 = new ArrayList<ZsSchool>();
+            ZsSchool school = new ZsSchool();
+            school.setSlAreaId(zsSchool.getSlAreaId());//省份
+            school.setSlSchoolName(zsSchool.getSlSchoolName());//学习中心全称
+            school.setSlNumber(zsSchool.getSlNumber());//学习中心编号
+            school.setSlOuterName(zsSchool.getSlOuterName());//校外学习中心全称
+            school.setSlDistrictId(zsSchool.getSlDistrictId());//区域管理中心
+            school.setSlState(zsSchool.getSlState());//状态
+            school.setSlStartTime(school.getSlStartTime());//审批通过时间
+            school.setSlApproval(school.getSlApproval());//批文号
+            list1.add(school);
+            /*schoolService.schoolAdd(list1);*/
+
+            /*学习中心用户表的添加*/
+        List<ZsSyudy> list2 = new ArrayList<ZsSyudy>();
+            ZsSyudy syudy = new ZsSyudy();
+            syudy.setSyAddress(zsSyudy.getSyAddress());//联系地址
+            syudy.setSyName(zsSyudy.getSyName());//负责人姓名
+            syudy.setSyPhone(zsSyudy.getSyPhone());//负责人电话
+            syudy.setSyEmail(zsSyudy.getSyEmail());//负责人邮箱
+            syudy.setSyUsername(zsSyudy.getSyUsername());//账号
+            syudy.setSyPassword(zsSyudy.getSyPassword());//密码
+            list2.add(syudy);
+            /*schoolService.syudyAdd(list2);*/
+
+            /*依托单位表的添加*/
+        List<ZsSupports> list3 = new ArrayList<ZsSupports>();
+            ZsSupports supports = new ZsSupports();
+            supports.setSsName(zsSupports.getSsName());//依托单位名称
+            supports.setSsNature(zsSupports.getSsNature());//依托单位信息
+            supports.setSsCode(zsSupports.getSsCode());//依托单位法人代码
+            list3.add(supports);
+
+            schoolService.schoolAdd(list1,list2,list3);
+            return "JG/school";
+    }
 
 
     /*课程进修生授权*/

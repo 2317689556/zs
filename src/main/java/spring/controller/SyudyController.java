@@ -73,7 +73,6 @@ public class SyudyController {
     @ResponseBody
     public Map<String,Object> nameFindByName(String syUsername){
         Map<String,Object> map=new HashMap<String, Object>();
-        System.out.println(syUsername);
         Integer name = syudyService.nameFindByName(syUsername);
 
         if(name !=0){
@@ -90,7 +89,6 @@ public class SyudyController {
     @ResponseBody
     public List<ZsAddress> quyuAll(){
         List<ZsAddress> list = syudyService.quyuAll();
-        System.out.println(list);
         return list;
     }
 }
