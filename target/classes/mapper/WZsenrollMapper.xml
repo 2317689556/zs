@@ -17,26 +17,17 @@
         sc.id=en.el_zs_school_id
     </select>
 
-    <!--
-    //学习中心修改是否允许招生
-    int updatewZcenroll(Integer id);-->
-    <!--允许-->
-    <update id="updatewZcenroll">
-        update zs_enroll set
-         el_allow=1
-         where
-         id=#{id}
-    </update>
 
-    <!--
-    //学习中心修改是否允许招生
-    int updatewZcenroll(Integer id);-->
+    <!--//学习中心修改是否允许招生
+    int updatewZcenroll(Integer id);&ndash;&gt;-->
     <!--不允许-->
     <update id="updatewZcenroll2">
-        update zs_enroll set
-         el_allow=-1
-         where
-         id=#{id}
+         UPDATE zs_enroll SET el_allow=
+        CASE WHEN el_allow=-1 THEN 1
+        WHEN el_allow=1 THEN -1 ELSE el_allow END
+        WHERE id=#{id}
     </update>
+
+
 
 </mapper>

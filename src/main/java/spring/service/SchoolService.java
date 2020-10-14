@@ -2,6 +2,7 @@ package spring.service;
 
 import org.springframework.stereotype.Service;
 import spring.dao.SchoolMapper;
+import spring.pojo.ZsEnroll;
 import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;
@@ -54,5 +55,15 @@ public class SchoolService {
     /*市的查询*/
     public List<ZsRegion> shiAll(Integer pid) {
         return schoolMapper.shiAll(pid);
+    }
+
+    /*课程进修生授权*/
+    public List<ZsSchool> engageFandAll() {
+        return schoolMapper.engageFandAll();
+    }
+
+    /*课程进修是否授权*/
+    public int updatewschool(Integer id) {
+        return schoolMapper.updatewschool(id);
     }
 }

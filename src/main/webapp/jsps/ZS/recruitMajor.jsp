@@ -59,7 +59,12 @@
                         field: 'id',
                         title: '操作',
                         formatter: function (value, row, index) {
-                            return "<input type=\"button\" class=\"btn btn-primary\" onclick=\"updateenroll('"+value+"')\" value=\"允许\"><input type=\"button\" class=\"btn btn-primary\" onclick=\"updateenroll2('"+value+"')\" value=\"不允许\">";
+                            if(row.elAllow==1){
+                                return "<input type=\"button\" class=\"btn btn-primary\" onclick=updateenroll('"+value+"') value=\"不允许\">"
+                            }else   {
+                                return "<input type=\"button\" class=\"btn btn-primary\" onclick=updateenroll('"+value+"')  value=\"允许\">"
+                            }
+
                         }
                     }
                 ]
@@ -90,7 +95,7 @@
     </div>
 
     <div style="margin-left: 100px;float: left;">
-        <a href="javascript:ovid()" id="daochu" class="btn btn-primary" style="clear: both"><导出></导出></a>
+        <a href="javascript:ovid()" id="daochu" class="btn btn-primary" style="clear: both">导出</a>
     </div>
 
     <div class="sort_list" style="margin: 40px; margin-top: 10px; box-shadow: 0 0 4px black; height: 400px; padding: 10px;margin-top: 50px">
@@ -119,34 +124,8 @@
 
 
 
-    /* 是否允许招生 允许*/
+    /* 是否允许招生*/
     function updateenroll(id) {
-        var msg = "您真的确定要更改吗吗？\n\n请确认！";
-        if (confirm(msg)==true){
-            return deleteenroll1(id);
-        }else{
-            return false;
-        }
-    }
-    function deleteenroll1(id) {
-        $.ajax({
-            type:"post",
-            dataType:"json",
-            url:"${pageContext.request.contextPath}/wZcenroll/updatewZcenroll",
-            data:{"id":id},
-            success:function () {
-                alert("更改成功")
-                shuaXin();
-            },
-            error: function () {
-                alert("失败了");
-            }
-        })
-    }
-
-
-    /* 是否允许招生 不允许*/
-    function updateenroll2(id) {
         var msg = "您真的确定要更改吗吗？\n\n请确认！";
         if (confirm(msg)==true){
             return updateenroll22(id);

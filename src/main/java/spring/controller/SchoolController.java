@@ -1,9 +1,11 @@
 package spring.controller;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import spring.pojo.ZsEnroll;
 import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;
@@ -105,5 +107,25 @@ public class SchoolController {
         return list;
     }
 
+
+
+    /*课程进修生授权*/
+    @RequestMapping("engageFandAll")
+    @ResponseBody
+    public List<ZsSchool> engageFandAll() {
+        List<ZsSchool> list = schoolService.engageFandAll();
+        System.out.println(list);
+        return list;
+    }
+
+
+    /*课程进修是否授权*/
+    @RequestMapping("updatewschool")
+    @ResponseBody
+    public int updatewschool(Integer id) {
+        int i = schoolService.updatewschool(id);
+        System.out.println(id);
+        return i;
+    }
 
 }

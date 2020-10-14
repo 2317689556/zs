@@ -21,12 +21,6 @@ public class WZsenrollService {
 
 
     //*学习中心修改是否允许招生*//*
-    /*允许*/
-    public int updatewZcenroll(Integer id) {
-        return wnrollMapper.updatewZcenroll(id);
-    }
-
-    //*学习中心修改是否允许招生*//*
     /*不允许*/
     public int updatewZcenroll2(Integer id) {
         return wnrollMapper.updatewZcenroll2(id);

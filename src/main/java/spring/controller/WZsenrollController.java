@@ -26,22 +26,13 @@ public class WZsenrollController {
         return list;
     }
 
-    /*学习中心修改是否允许招生*/
-    /*允许*/
-    @RequestMapping("updatewZcenroll")
-    @ResponseBody
-    public int updatewZcenroll(Integer id) {
-        int i = wenrollService.updatewZcenroll(id);
-        return i;
-    }
 
     /*学习中心修改是否允许招生*/
-    /*不允许*/
+    /*不允许 updatewschool*/
     @RequestMapping("updatewZcenroll2")
     @ResponseBody
     public int updatewZcenroll2(Integer id) {
         int i = wenrollService.updatewZcenroll2(id);
         return i;
     }
-
 }

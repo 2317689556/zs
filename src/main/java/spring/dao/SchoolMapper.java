@@ -1,5 +1,6 @@
 package spring.dao;
 
+import spring.pojo.ZsEnroll;
 import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;
@@ -36,4 +37,10 @@ public interface SchoolMapper {
 
     /*市的查询*/
     List<ZsRegion> shiAll(Integer pid);
+
+    /*课程进修生授权*/
+    List<ZsSchool> engageFandAll();
+
+    /*课程进修是否授权*/
+    int updatewschool(Integer id);
 }

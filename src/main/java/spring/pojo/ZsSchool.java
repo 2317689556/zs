@@ -31,5 +31,6 @@ public class ZsSchool {
 
     private String asName;
     private String areaName;
+    private String elBatch;
 
 }

@@ -17,7 +17,7 @@
     <script>
         $(function () {
             $("#tab1").bootstrapTable({
-                url: "/wZcenroll/wZcenrollFandAll",
+                url: "/school/engageFandAll",
                 method: "get",
                 contentType: "application/x-www-form-urlencoded; charset=UTF-8",
                 pagination:true,
@@ -34,32 +34,30 @@
                         field: 'elBatch',
                         title: '入学批次'
                     }, {
-                        field: 'slNum',
+                        field: 'slNumber',
                         title: '学习中心编号'
                     },{
-                        field: 'slName',
+                        field: 'slSchoolName',
                         title: '学习中心全称'
                     },{
-                        field: 'elGradation',
-                        title: '层次'
-                    },{
-                        field: 'elMajor',
-                        title: '专业'
-                    },{
-                        field: 'elAllow',
-                        title: '是否允许招生专业',
+                        field: 'slState',
+                        title: '授权状态',
                         formatter: function (value, row, index) {
                             if (value == 1) {
-                                return "<span>允许</span>";
+                                return "<span>已授权</span>";
                             } else if (value == -1) {
-                                return "<span class='third-item'>不允许</span>";
+                                return "<span class='third-item'>未授权</span>";
                             }
                         }
                     },{
                         field: 'id',
                         title: '操作',
                         formatter: function (value, row, index) {
-                            return "<input type=\"button\" class=\"btn btn-primary\" onclick=\"updateenroll('"+value+"')\" value=\"允许\"><input type=\"button\" class=\"btn btn-primary\" onclick=\"updateenroll2('"+value+"')\" value=\"不允许\">";
+                            if(row.slState==1){
+                                return "<input type=\"button\" class=\"btn btn-primary\" onclick=updatschoolww('"+value+"') value=\"不授权\">"
+                            }else   {
+                                return "<input type=\"button\" class=\"btn btn-primary\" onclick=updatschoolww('"+value+"')  value=\"授权\">"
+                            }
                         }
                     }
                 ]
@@ -73,24 +71,31 @@
 <c:import url="../utlis/broadside.jsp"/>
 
 <div style="width: 1300px; height: 800px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black;">
-    <center><h3 style="margin-bottom: 40px">招生管理</h3></center>
+    <center><h3 style="margin-bottom: 40px">课程进修生授权</h3></center>
     <div style="width: 1000px;height: 100px;">
-    <div style="width: 300px;float: left;margin-left: 50px">
-    <span style="float: left; font-size: 17px; line-height: 34px; margin-left: 40px; ">高校编码：</span>
-        <input class="form-control date_1" id="date_1"  style="width: 150px; float: left;" onchange="shuaXin()">
-    </div>
 
-    <div style="width: 300px;float: left;margin-left: 50px">
-    <span style="float: left; font-size: 17px; line-height: 34px; margin-left: 50px;">高校名称：</span>
-    <input class="form-control date_1" id="date_2"  style="width: 150px;" onchange="shuaXin()">
-    </div>
-    <div style="width: 200px;float: left;margin-left: 50px">
-        <button id="chaxun" onclick="cha1()" type="button" class="btn btn-primary">查询</button>
-    </div>
+
+        <div style="float: left;margin-left: 50px;margin-top: 20px">
+            <label>入学批次</label>
+            <input type="text" name="slSchoolName" id="slSchoolName">
+        </div>
+
+        <div style="float: left;margin-left: 20px;margin-top: 20px">
+            <label>学习中心</label>
+            <input type="text" name="stName" id="name">
+        </div>
+        <div style="float: left;margin-left: 20px;margin-top: 20px">
+            <label>报名时间状态设置 </label>
+            <input type="text" name="stIdcard">
+        </div>
+
+        <div style="float: left;margin-left: 20px;margin-top: 20px">
+            <button class="btn btn-primary" onclick="mohuFind()">查询</button>
+        </div>
     </div>
 
     <div style="margin-left: 100px;float: left;">
-        <a href="javascript:ovid()" id="daochu" class="btn btn-primary" style="clear: both"><导出></导出></a>
+        <a href="javascript:ovid()" id="daochu" class="btn btn-primary" style="clear: both">导出</a>
     </div>
 
     <div class="sort_list" style="margin: 40px; margin-top: 10px; box-shadow: 0 0 4px black; height: 400px; padding: 10px;margin-top: 50px">
@@ -115,38 +120,8 @@
     }
 
 
-    /*******添加高校*********/
-
-
-
-    /* 是否允许招生 允许*/
-    function updateenroll(id) {
-        var msg = "您真的确定要更改吗吗？\n\n请确认！";
-        if (confirm(msg)==true){
-            return deleteenroll1(id);
-        }else{
-            return false;
-        }
-    }
-    function deleteenroll1(id) {
-        $.ajax({
-            type:"post",
-            dataType:"json",
-            url:"${pageContext.request.contextPath}/wZcenroll/updatewZcenroll",
-            data:{"id":id},
-            success:function () {
-                alert("更改成功")
-                shuaXin();
-            },
-            error: function () {
-                alert("失败了");
-            }
-        })
-    }
-
-
-    /* 是否允许招生 不允许*/
-    function updateenroll2(id) {
+    /* 是否授权*/
+    function updatschoolww(id) {
         var msg = "您真的确定要更改吗吗？\n\n请确认！";
         if (confirm(msg)==true){
             return updateenroll22(id);
@@ -158,7 +133,7 @@
         $.ajax({
             type:"post",
             dataType:"json",
-            url:"${pageContext.request.contextPath}/wZcenroll/updatewZcenroll2",
+            url:"${pageContext.request.contextPath}/school/updatewschool",
             data:{"id":id},
             success:function () {
                 alert("更改成功")

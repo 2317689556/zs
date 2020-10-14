@@ -78,6 +78,26 @@
         select areaName,id from zs_region WHERE pid=#{pid}
     </select>
 
+  <!--  /*课程进修生授权*/
+    全查
+    List<ZsEnroll> engageFandAll();-->
+    <select id="engageFandAll" resultType="ZsSchool">
+        select
+        sc.sl_number,sc.sl_school_name,sc.sl_state,sc.id,
+        en.el_batch
+        from
+        zs_school sc,zs_enroll en
+        WHERE
+        sc.id=en.el_zs_school_id
+    </select>
 
+   <!-- /*课程进修是否授权*/
+    int updatewschool(Integer id);-->
+    <update id="updatewschool">
+         UPDATE zs_school SET sl_state=
+        CASE WHEN sl_state=-1 THEN 1
+        WHEN sl_state=1 THEN -1 ELSE sl_state END
+        WHERE id=#{id}
+    </update>
 
 </mapper>
