@@ -8,7 +8,7 @@ import java.util.List;
 public interface HschoolMapper {
 
     /*高校全查*/
-    List<ZsHschool> hschoolFandAll();
+    List<ZsHschool> hschoolFandAll(@Param("hlNumber")String hlNumber, @Param("hlName")String hlName);
 
     /*删除高校*/
     int deleteHschool(@Param("id") Integer id);
@@ -21,6 +21,7 @@ public interface HschoolMapper {
 
     /*添加的高校*/
     int addHschool(ZsHschool hschool);
+
 }
 
 

@@ -49,9 +49,6 @@
                                   <li>
                                       <a class="menu3">课程进修生授权</a>
                                   </li>
-                                  <li>
-                                      <a class="menu3">奥鹏学习中心招生授权</a>
-                                  </li>
                               </ul>
                           </li>
 

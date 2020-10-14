@@ -68,4 +68,10 @@
       SELECT COUNT(Sy_username) from zs_syudy where Sy_username=#{syUsername}
    </select>
 
+   <!--区域管理查询-->
+   <!--List<ZsAddress> quyuAll();-->
+   <select id="quyuAll" resultType="ZsAddress">
+        select * from zs_address;
+   </select>
+
 </mapper>

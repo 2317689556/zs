@@ -4,10 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import spring.pojo.ZsRegion;
-import spring.pojo.ZsSchool;
-import spring.pojo.ZsSyudy;
-import spring.pojo.ZsregionVo;
+import spring.pojo.*;
 import spring.service.SyudyService;
 
 import javax.annotation.Resource;
@@ -86,5 +83,14 @@ public class SyudyController {
             map.put("msg","suc");
         }
         return map;
+    }
+
+    /*区域管理查询*/
+    @RequestMapping("quyuAll")
+    @ResponseBody
+    public List<ZsAddress> quyuAll(){
+        List<ZsAddress> list = syudyService.quyuAll();
+        System.out.println(list);
+        return list;
     }
 }

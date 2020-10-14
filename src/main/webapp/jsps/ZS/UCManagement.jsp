@@ -16,13 +16,28 @@
     <link rel="stylesheet" href="/cxCalendar/css/jquery.cxcalendar.css">
     <script>
         $(function () {
+            muhu();
+        })
+
+        function muhu() {
+           /* var hlNumber = $('input[name="hlNumber"]').val();
+            var hlName = $('input[name="hlName"]').val();
+            if(hlNumber==null||hlNumber==""){hlNumber=-1};
+            if(hlName==null||hlName==""){hlName=-1};*/
             $("#tab1").bootstrapTable({
                 url: "/hschool/HschoolFandAll",
-                method: "get",
+                //url: "/hschool/HschoolFandAll/"+hlNumber+"/"+hlName,
+                method: "post",
                 contentType: "application/x-www-form-urlencoded; charset=UTF-8",
                 pagination:true,
                 sidePagination: "client",
                 pageSize: 5,
+                queryParams: function (params) {
+                    return {
+                        hlNumber: $("#hlNumber").val(),
+                        hlName: $("#hlName").val()
+                    };
+                },
                 columns: [
                     {
                         field: 'id',
@@ -45,7 +60,8 @@
                     }
                 ]
             })
-        })
+        }
+
     </script>
 </head>
 
@@ -56,18 +72,20 @@
 <div style="width: 1300px; height: 800px; border:1px solid rgba(0,0,0,0.6); float: left; margin: 50px 0px 0px 60px; box-shadow: 0 0 8px black;">
     <center><h3 style="margin-bottom: 40px">招生管理</h3></center>
     <div style="width: 1000px;height: 100px;">
-    <div style="width: 300px;float: left;margin-left: 50px">
-    <span style="float: left; font-size: 17px; line-height: 34px; margin-left: 40px; ">高校编码：</span>
-        <input class="form-control date_1" id="date_1"  style="width: 150px; float: left;" onchange="shuaXin()">
-    </div>
+        <form>
+             <div style="width: 300px;float: left;margin-left: 50px">
+                <span style="float: left; font-size: 17px; line-height: 34px; margin-left: 40px; ">高校编码：</span>
+                     <input class="form-control date_1" id="hlNumber"  name="hlNumber"  style="width: 150px; float: left; "  >
+            </div>
 
-    <div style="width: 300px;float: left;margin-left: 50px">
-    <span style="float: left; font-size: 17px; line-height: 34px; margin-left: 50px;">高校名称：</span>
-    <input class="form-control date_1" id="date_2"  style="width: 150px;" onchange="shuaXin()">
-    </div>
-    <div style="width: 200px;float: left;margin-left: 50px">
-        <button id="chaxun" onclick="cha()" type="button" class="btn btn-primary">查询</button>
-    </div>
+             <div style="width: 300px;float: left;margin-left: 50px">
+                <span style="float: left; font-size: 17px; line-height: 34px; margin-left: 50px;">高校名称：</span>
+                     <input class="form-control date_1" id="hlName"  name="hlName" style="width: 150px;"   >
+             </div>
+             <div style="width: 200px;float: left;margin-left: 50px">
+                     <button id="chaxun" onclick="shuaXin()"  type="button" class="btn btn-primary">查询</button>
+             </div>
+        </form>
     </div>
 
     <div style="margin-left: 100px;float: left;">
@@ -293,5 +311,8 @@
             }
         })
     }
+
+
+
 
 </script>

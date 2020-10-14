@@ -1,9 +1,6 @@
 package spring.dao;
 
-import spring.pojo.ZsRegion;
-import spring.pojo.ZsSchool;
-import spring.pojo.ZsSyudy;
-import spring.pojo.ZsregionVo;
+import spring.pojo.*;
 
 import java.util.List;
 
@@ -13,6 +10,9 @@ public interface SyudyMapper {
 
     /*用户名检测*/
     Integer nameFindByName(String syUsername);
+
+    /*区域管理查询*/
+    List<ZsAddress> quyuAll();
 
     /*查询学习中心用户*//*
     List<ZsSyudy> examineSyudy();
