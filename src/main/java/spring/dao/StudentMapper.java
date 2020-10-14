@@ -19,7 +19,7 @@ public interface StudentMapper {
     int delIdentityMessage(Integer id);
 
     //身份信息统计
-    List<ZsStudent> showIdentityStatistic();
+    List<ZsStudent> showIdentityStatistic(@Param("slSchoolName") String slSchoolName);
 
     List<ZsSchool> showSchoolClass();
 }

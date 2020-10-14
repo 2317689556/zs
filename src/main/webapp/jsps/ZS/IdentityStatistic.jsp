@@ -30,14 +30,14 @@
     <h3 style="">身份证信息读取管理</h3>
     <div style="float: left;margin-left: 800px;margin-top: 20px">
         <label>学习中心</label>
-        <input type="hidden" name="">
+        <input type="hidden" name="slSchoolName">
         <select style="width: 150px;height: 30px" id="selectaId">
             <option>-请选择-</option>
         </select>
     </div>
 
     <div style="float: left;margin-left: 20px;margin-top: 20px">
-        <button class="btn btn-primary" onclick="mohuFind()">查询</button>
+        <button class="btn btn-primary" onclick="tongjiFind()">查询</button>
     </div>
 
 
@@ -53,14 +53,17 @@
             font-size: 16px;" onclick="outIdentity()">导出到Excel
             </button>
         </div>
-        <table id="identity_id">
+        <table id="tongji_id">
         </table>
     </div>
 </div>
 </body>
 <script>
+    function tongjiFind() {
+        $("#tongji_id").bootstrapTable("refresh");
+    }
     $(function () {
-        $("#identity_id").bootstrapTable({
+        $("#tongji_id").bootstrapTable({
             url: "/student/showIdentityStatistic",
             pageNumber: 1,
             pageSize: 5,
@@ -73,6 +76,14 @@
             contentType: "aplication/x-www-form-urlencoded;charset=UTF-8",
             striped: true,//斑马线
             cache: false,
+            queryParams:function (param) {//请求参数
+                return{
+                    limit:param.limit,
+                    offset:param.offset,
+                    slSchoolName:$("input[name=slSchoolName]").val(),
+
+                }
+            },
 
             columns: [
                 {

@@ -41,8 +41,15 @@
     <!--//身份信息统计
     List<ZsStudent> showIdentityStatistic();-->
     <select id="showIdentityStatistic" resultType="ZsStudent">
-        SELECT DISTINCT sc.sl_school_name,(SELECT COUNT(st_name) FROM zs_student) mcount
-        FROM zs_student stu,zs_school sc WHERE stu.school_id=sc.id
+
+        SELECT sc.sl_school_name,COUNT(*)AS mcount FROM zs_school sc,zs_student stu
+        <where>
+            <if test="slSchoolName!=null and slSchoolName!=''">
+                and sc.sl_school_name like '%${slSchoolName}%'
+            </if>
+           and  sc.id=stu.school_id
+        </where>
+        GROUP BY stu.school_id
     </select>
 
     <!--showSchoolClass-->

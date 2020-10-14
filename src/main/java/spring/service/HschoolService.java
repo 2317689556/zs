@@ -1,11 +1,8 @@
 package spring.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spring.dao.HschoolMapper;
-import spring.dao.SchoolMapper;
 import spring.pojo.ZsHschool;
-import spring.pojo.ZsSchool;
 
 import javax.annotation.Resource;
 import java.util.List;

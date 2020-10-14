@@ -1,11 +1,8 @@
 package spring.controller;
 
-import ch.qos.logback.core.net.SyslogOutputStream;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import spring.pojo.ZsEnroll;
 import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;

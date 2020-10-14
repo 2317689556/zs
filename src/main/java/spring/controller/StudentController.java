@@ -89,8 +89,8 @@ public class StudentController {
     //身份信息统计
     @ResponseBody
     @RequestMapping("/showIdentityStatistic")
-    public List<ZsStudent> showIdentityStatistic(){
-        List<ZsStudent> list = studentService.showIdentityStatistic();
+    public List<ZsStudent> showIdentityStatistic(String slSchoolName){
+        List<ZsStudent> list = studentService.showIdentityStatistic(slSchoolName);
         return list;
     }
 

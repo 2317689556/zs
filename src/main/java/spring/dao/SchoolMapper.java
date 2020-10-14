@@ -1,6 +1,5 @@
 package spring.dao;
 
-import spring.pojo.ZsEnroll;
 import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;

@@ -249,7 +249,7 @@
         $("#schooluser_tab").bootstrapTable({
             url: "/school/showSchoolUser",
             pageNumber: 1,
-            pageSize: 5,
+            pageSize: 3,
             pageList: [10, 15, 20],
             pagination: true,
             sidePagination: 'client', //客户端分页    服务端分页'server'

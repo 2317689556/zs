@@ -2,7 +2,6 @@ package spring.service;
 
 import org.springframework.stereotype.Service;
 import spring.dao.SchoolMapper;
-import spring.pojo.ZsEnroll;
 import spring.pojo.ZsRegion;
 import spring.pojo.ZsSchool;
 import spring.pojo.ZsSyudy;

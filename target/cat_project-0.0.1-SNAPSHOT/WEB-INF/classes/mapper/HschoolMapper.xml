@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spring.dao.HschoolMapper">
+
+
+    <!--高校_全查-->
+    <!--List<ZsHschool> hschoolFandAll();-->
+    <select id="hschoolFandAll" resultType="ZsHschool">
+        SELECT *
+        FROM zs_hschool
+        <where>
+            <if test="hlNumber != null and hlNumber != ''  ">
+                hl_number like '%${hlNumber}%'
+            </if>
+            <if test="hlName != null and hlName != ''">
+                AND hl_name like '%${hlName}%'
+            </if>
+        </where>
+    </select>
+
+
+   <!-- /*删除高校*/-->
+   <!--  int deleteHschool();-->
+
+    <delete id="deleteHschool">
+        delete from zs_hschool where id=#{id}
+    </delete>
+
+    <!--高校管理__配合修改的单查-->
+    <!--ZsHschool findHschoolById(ZsHschool hschool);-->
+    <select id="findHschoolById" resultType="ZsHschool">
+      select * from zs_hschool where id=#{id}
+    </select>
+
+    <!--/*修改的高校*/-->
+    <!--int updatehschool(ZsHschool hschool);-->
+    <update id="updatehschool" parameterType="ZsHschool">
+        update zs_hschool set
+         hl_number=#{hlNumber},
+         hl_name=#{hlName}
+         where
+         id=#{id}
+    </update>
+
+    <!--高校管理__添加-->
+    <!--/*添加的高校*/
+    int addHschool(ZsHschool hschool);-->
+    <insert id="addHschool">
+        insert into zs_hschool  (hl_number,hl_name)
+        value(#{hlNumber},#{hlName});
+    </insert>
+
+
+</mapper>

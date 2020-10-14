@@ -96,15 +96,15 @@
         $("#outBound_tab").bootstrapTable({
             url: "/school/showSchoolenter",
             pageNumber:1,
-            pageSize:5,
-            pageList:[5,10,15],
-            pagination:true,
-            sidePagination:'client',  //客户端分页'client'    服务端分页'server'
+            pageSize: 5,
+            pageList: [10, 15, 20],
+            pagination: true,
+            sidePagination: 'client', //客户端分页    服务端分页'server'
             //post提交，默认不写get
-            mehtod:'post',
+            mehtod: 'post',
             //发送到服务器的数据编码类型，设置form表单传输编码
-            contentType:"aplication/x-www-form-urlencoded;charset=UTF-8",
-            striped:true,//斑马线
+            contentType: "aplication/x-www-form-urlencoded;charset=UTF-8",
+            striped: true,//斑马线
 
             columns: [
                 {

@@ -38,8 +38,8 @@ public class StudentService {
         return studentMapper.delIdentityMessage(id);
     }
 
-    public List<ZsStudent> showIdentityStatistic() {
-        return studentMapper.showIdentityStatistic();
+    public List<ZsStudent> showIdentityStatistic(String slSchoolName) {
+        return studentMapper.showIdentityStatistic(slSchoolName);
     }
 
     public List<ZsSchool> showSchoolClass() {

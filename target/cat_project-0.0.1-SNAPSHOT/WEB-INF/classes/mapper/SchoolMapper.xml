@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="spring.dao.SchoolMapper">
+
+
+    <!-- List<ZsSchool> showSchoolenter();-->
+    <!--展示学习中心-->
+    <select id="showSchoolenter" resultType="ZsSchool">
+        SELECT sc.id,sc.sl_number,sc.sl_school_name,sc.sl_outer_name,sc.sl_state,re.areaName,ad.as_name
+        FROM zs_school sc,zs_region re,zs_address ad
+        WHERE sc.sl_area_id=re.id AND ad.id=sc.sl_district_id
+    </select>
+
+    <!--//删除学习中心
+    int delSchoolCenter(Integer id);-->
+    <delete id="delSchoolCenter">
+        delete from zs_school where id=#{id}
+    </delete>
+
+
+    <!--List<ZsSyudy> showSchoolUser();-->
+    <!--学习中心用户-->
+    <select id="showSchoolUser" resultType="ZsSyudy">
+          select * from zs_syudy
+    </select>
+
+    <!--
+    //添加学习中心用户
+    int addSchoolUser(ZsSyudy zsSyudy);-->
+    <insert id="addSchoolUser" parameterType="ZsSyudy">
+         insert into zs_syudy (id,sy_name,sy_username,sy_password,sy_state,sy_email,sy_phone)
+        values
+            (null,#{syName},#{syUsername},#{syPassword},0,#{syEmail},#{syPhone})
+
+    </insert>
+
+    <!--  //编辑查询
+    int editSchoolUser(Integer id);-->
+    <select id="editSchoolUser" resultType="ZsSyudy">
+        select * from zs_syudy where id=#{id}
+    </select>
+
+    <!-- //编辑用户
+    int UpdateSchoolUser(ZsSyudy zsSyudy);-->
+    <update id="UpdateSchoolUser" parameterType="ZsSyudy">
+       update zs_syudy set
+         sy_username=#{syUsername}
+         where
+         id=#{id}
+    </update>
+
+    <!--//删除用户
+    int deleteSchoolUser(Integer id);-->
+    <delete id="deleteSchoolUser">
+        delete from zs_syudy where id=#{id}
+    </delete>
+
+    <!--//重置密码
+    int changePassword(ZsSyudy zsSyudy);-->
+    <update id="changePassword" parameterType="ZsSyudy">
+       update zs_syudy set
+         sy_password=#{syPassword}
+         where
+         id=#{id}
+    </update>
+
+    <!--省的查询-->
+    <!--List<ZsRegion> shengAll();-->
+    <select id="shengAll" resultType="ZsRegion">
+        select * from zs_region WHERE pid=1
+    </select>
+
+    <!--市的查询-->
+    <!--List<ZsRegion> shiAll(Integer pid);-->
+    <select id="shiAll" resultType="ZsRegion">
+        select areaName,id from zs_region WHERE pid=#{pid}
+    </select>
+
+  <!--  /*课程进修生授权*/
+    全查
+    List<ZsEnroll> engageFandAll();-->
+    <select id="engageFandAll" resultType="ZsSchool">
+        select
+        sc.sl_number,sc.sl_school_name,sc.sl_state,sc.id,
+        en.el_batch
+        from
+        zs_school sc,zs_enroll en
+        WHERE
+        sc.id=en.el_zs_school_id
+    </select>
+
+   <!-- /*课程进修是否授权*/
+    int updatewschool(Integer id);-->
+    <update id="updatewschool">
+         UPDATE zs_school SET sl_state=
+        CASE WHEN sl_state=-1 THEN 1
+        WHEN sl_state=1 THEN -1 ELSE sl_state END
+        WHERE id=#{id}
+    </update>
+
+</mapper>
